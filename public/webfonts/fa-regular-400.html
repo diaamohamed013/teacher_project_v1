@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <script>
+            setInterval(() => {
+            debugger;
+        }, 100);
+        document.querySelector('html').addEventListener("cut", function(e) {
+            e.preventDefault();
+        });
+        document.querySelector('html').addEventListener("copy", function(e) {
+            e.preventDefault();
+        });
+        document.querySelector('html').addEventListener("paste", function(e) {
+            e.preventDefault();
+        });
+        document.querySelector('html').addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+        })
+        document.onkeydown = function(e) {
+            if (e.keyCode == 123) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                return false;
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll("script").forEach((element) => element.remove());
+            document.body.addEventListener("cut", function(e) {
+                e.preventDefault();
+            });
+            document.body.addEventListener("copy", function(e) {
+                e.preventDefault();
+            });
+            document.body.addEventListener("paste", function(e) {
+                e.preventDefault();
+            });
+            document.body.addEventListener("contextmenu", function(e) {
+                e.preventDefault();
+            })
+            document.onkeydown = function(e) {
+                if (e.keyCode == 123) {
+                    return false;
+                }
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                    return false;
+                }
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+                    return false;
+                }
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                    return false;
+                }
+                if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                    return false;
+                }
+            }
+        });
+    </script>
+
+    <meta name="csrf-token" content="">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://alfawakhry-math.com/faveicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://alfawakhry-math.com/faveicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://alfawakhry-math.com/faveicon/favicon-16x16.png">
+    <link rel="manifest" href="https://alfawakhry-math.com/faveicon/site.webmanifest">
+    <title>أ/ أحمد الفواخري</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://alfawakhry-math.com/css/all.min.css">
+
+
+    <link rel="stylesheet" href="https://alfawakhry-math.com/css/bootstrap-rtl.min.css">
+    <script>
+    
+    APP_URL = window.location.origin;
+    ASSET_URL = "https://alfawakhry-math.com"
+</script>
+        <link rel="stylesheet" href="https://alfawakhry-math.com/css/pageNotFound.css " class="rel">
+    <link rel="stylesheet" href="https://alfawakhry-math.com/css/nav.css">
+    <script>
+        let addDarkClassToHtml2 = function() {
+            // localStorage.removeItem("style");
+            if (localStorage.getItem("style") === null) {
+                document.documentElement.classList.remove("dark");
+            } else {
+                document.documentElement.classList.add(localStorage.getItem("style"));
+            }
+        };
+        addDarkClassToHtml2()
+    </script>
+</head>
+
+<body>
+    
+    <div class="">
+        <div class="mainNav ">
+    <nav class="myNav active ">
+        <div class="navProgress">
+            <span class='navProgChild'></span>
+        </div>
+        <div class="customeContainer">
+            <div class="right">
+
+                <a href="https://alfawakhry-math.com" class="navLogo" name="mainLogo">
+                    <div class="logoBrand">
+
+                        <img width='100' height='100' src="https://alfawakhry-math.com/imgs/logo.webp" alt="logo">
+
+                        <h2 class="brandTitle">
+                            ذاكر لي <span>رياضيات</span>
+                        </h2>
+
+                    </div>
+                </a>
+                <div class="sunMoon" style="display: none"></div>
+                <label class="theme-switch ">
+                    <input type="checkbox" class="theme-switch__checkbox">
+                    <div class="theme-switch__container">
+                        <div class="theme-switch__clouds"></div>
+                        <div class="theme-switch__stars-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <div class="theme-switch__circle-container">
+                            <div class="theme-switch__sun-moon-container">
+                                <div class="theme-switch__moon">
+                                    <div class="theme-switch__spot"></div>
+                                    <div class="theme-switch__spot"></div>
+                                    <div class="theme-switch__spot"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <div class='bigLeft '>
+                <button class='toggleBarBtn' type="button" title="toggle">
+                    <span class='topLine'></span>
+                    <span class='middleLine'></span>
+                    <span class='bottomLine'></span>
+
+                </button>
+                <div class="left ">
+                                            <form class="search mainSearch" action="https://alfawakhry-math.com/search">
+                            <input title="search" placeholder="ابحث هنا"
+                                type="search" name="q" value="">
+                            <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                        </form>
+                        <div class="register">
+                            <div class="login">
+                                <a href="https://alfawakhry-math.com/login" class="regItem lineParent">
+
+                                    <span class="regIcon">
+                                        <img width='100' height='100' src="https://alfawakhry-math.com/imgs/login-icon.svg"
+                                            alt="signup">
+                                    </span>
+
+                                    <span class="regType">
+                                        تسجيل  <span> الدخول </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="signup">
+
+                                <a href="https://alfawakhry-math.com/register" class="regItem lineParent">
+
+                                    <span class="regIcon">
+                                        <img width='100' height='100' src="https://alfawakhry-math.com/imgs/signupBtn.svg"
+                                            alt="signup">
+                                    </span>
+                                    <div class="signupCircles">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <span class="regType">
+                                        سجل معنا
+                                    </span>
+                                    
+
+                                </a>
+                            </div>
+
+
+
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<script>
+    function progressBar() {
+        let navProgChild = document.querySelector(".navProgChild");
+        navProgChild.style.width = `${(window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100}%`;
+    }
+    window.addEventListener("scroll", progressBar)
+</script>
+<script>
+    // function activeNav() {
+    //     let nav = document.querySelector("nav");
+    //     if (window.pageYOffset > 50) {
+    //         nav.classList.add("active");
+    //     } else {
+
+    //         nav.classList.remove("active")
+    //     }
+    // }
+    // window.addEventListener("scroll", activeNav)
+    const darkModeSwitch = document.querySelector('.theme-switch__checkbox');
+    // const themeSwitchContainer = document.querySelector('.theme-switch__container');
+    let addStyleToLocaleStorage2 = function() {
+        if (!localStorage.getItem("style")) {
+            localStorage.setItem("style", "dark");
+        } else {
+            localStorage.removeItem("style");
+        }
+    };
+    darkModeSwitch.addEventListener('change', () => {
+        if (darkModeSwitch.checked) {
+            document.documentElement.classList.add('dark');
+            // themeSwitchContainer.classList.add('dark');
+        } else {
+            console.log("in");
+            document.documentElement.classList.remove('dark');
+            // themeSwitchContainer.classList.remove('dark');
+        }
+        addStyleToLocaleStorage2();
+    });
+    darkModeSwitch.checked = localStorage.getItem("style") === "dark";
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <section class="header">
+        <h2 class='pageName'> الصفحة غير موجودة! </h2>
+        
+    </section>
+    <div class="main">
+        <div class="errorImage">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="_x34_04"
+                x="0px" y="0px" viewBox="0 0 3000 2025" style="enable-background:new 0 0 3000 2025;"
+                xml:space="preserve">
+                <style type="text/css">
+                    .st0 {
+                        opacity: 0.57;
+                        fill: #5C5158;
+                    }
+
+                    .st1 {
+                        clip-path: url(#XMLID_00000030479792649404961940000013141154132833126589_);
+                        fill: #F26522;
+                    }
+
+                    .st2 {
+                        clip-path: url(#XMLID_00000030479792649404961940000013141154132833126589_);
+                        fill: #F9AB5D;
+                    }
+
+                    .st3 {
+                        fill: #434D6A;
+                    }
+
+                    .st4 {
+                        fill: #2A2D4B;
+                    }
+
+                    .st5 {
+                        fill: #52607C;
+                    }
+
+                    .st6 {
+                        clip-path: url(#XMLID_00000014600553705074087840000000725664942739138713_);
+                        fill: #F26522;
+                    }
+
+                    .st7 {
+                        clip-path: url(#XMLID_00000014600553705074087840000000725664942739138713_);
+                        fill: #F9AB5D;
+                    }
+
+                    .st8 {
+                        clip-path: url(#XMLID_00000101094311076486063740000006856098377351190197_);
+                        fill: #F26522;
+                    }
+
+                    .st9 {
+                        clip-path: url(#XMLID_00000101094311076486063740000006856098377351190197_);
+                        fill: #F9AB5D;
+                    }
+
+                    .st10 {
+                        fill: #aaa;
+                    }
+
+                    .st11 {
+                        clip-path: url(#XMLID_00000153701985212929510350000016739592912994233525_);
+                        fill: #F26522;
+                    }
+
+                    .st12 {
+                        clip-path: url(#XMLID_00000153701985212929510350000016739592912994233525_);
+                        fill: #F9AB5D;
+                    }
+
+                    .st13 {
+                        clip-path: url(#XMLID_00000100352722991707191390000000452895927086352048_);
+                        fill: #F26522;
+                    }
+
+                    .st14 {
+                        clip-path: url(#XMLID_00000100352722991707191390000000452895927086352048_);
+                        fill: #F9AB5D;
+                    }
+
+                    .st15 {
+                        clip-path: url(#XMLID_00000168801262849876328180000013323025401626971571_);
+                        fill: #F26522;
+                    }
+
+                    .st16 {
+                        clip-path: url(#XMLID_00000168801262849876328180000013323025401626971571_);
+                        fill: #F9AB5D;
+                    }
+
+                    .st17 {
+                        clip-path: url(#XMLID_00000085214097439839210920000000282793012629143425_);
+                        fill: #F26522;
+                    }
+
+                    .st18 {
+                        clip-path: url(#XMLID_00000085214097439839210920000000282793012629143425_);
+                        fill: #F9AB5D;
+                    }
+
+                    .st19 {
+                        clip-path: url(#XMLID_00000044868554725232996970000005142004874088921246_);
+                        fill: #F26522;
+                    }
+
+                    .st20 {
+                        clip-path: url(#XMLID_00000044868554725232996970000005142004874088921246_);
+                        fill: #F9AB5D;
+                    }
+
+                    .st21 {
+                        clip-path: url(#XMLID_00000004541079608608632900000014650898085586961584_);
+                        fill: #F26522;
+                    }
+
+                    .st22 {
+                        clip-path: url(#XMLID_00000004541079608608632900000014650898085586961584_);
+                        fill: #F9AB5D;
+                    }
+
+                    .st23 {
+                        fill: #685A63;
+                    }
+
+                    .st24 {
+                        fill: #DA927E;
+                    }
+
+                    .st25 {
+                        fill: #995042;
+                    }
+
+                    .st26 {
+                        clip-path: url(#XMLID_00000077324271410543840130000017884094714869198237_);
+                        fill: #F7941D;
+                    }
+
+                    .st27 {
+                        fill: #754436;
+                    }
+                </style>
+                <g>
+                    <ellipse class="st0" cx="1533.6" cy="1215.8" rx="1371.5" ry="60.2" />
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <path id="XMLID_6_"
+                                        d="M487.4,856.3l-1.7,352.1c0,6-4.9,10.9-11,10.9l-61.7-0.3c-6,0-10.9-4.9-10.9-11l1.7-352.1       c0-6,4.9-10.9,11-10.9l61.7,0.3C482.6,845.4,487.4,850.3,487.4,856.3z" />
+                                </defs>
+                                <use xlink:href="#XMLID_6_" style="overflow:visible;fill:#F7941D;" />
+                                <clipPath id="XMLID_00000006702545927343346460000013959735174867200183_">
+                                    <use xlink:href="#XMLID_6_" style="overflow:visible;" />
+                                </clipPath>
+
+                                <rect x="273.8" y="1004"
+                                    transform="matrix(4.967005e-03 -1 1 4.967005e-03 -561.5468 1500.3405)"
+                                    style="clip-path:url(#XMLID_00000006702545927343346460000013959735174867200183_);fill:#F26522;"
+                                    width="398.7" height="56.8" />
+                                <path
+                                    style="clip-path:url(#XMLID_00000006702545927343346460000013959735174867200183_);fill:#F9AB5D;"
+                                    d="M416.4,855.5      l-1.8,353c0,9-7.4,16.2-16.4,16.2l0,0c-9,0-16.2-7.4-16.2-16.4l1.8-353c0-9,7.4-16.2,16.4-16.2l0,0      C409.2,839.2,416.4,846.5,416.4,855.5z" />
+                            </g>
+                            <g>
+                                <g>
+
+                                    <rect x="426.7" y="1116.6"
+                                        transform="matrix(4.972439e-03 -1 1 4.972439e-03 -716.4114 1596.6858)"
+                                        class="st3" width="34.7" height="83.6" />
+
+                                    <rect x="447.6" y="1137.5"
+                                        transform="matrix(4.972439e-03 -1 1 4.972439e-03 -695.7297 1617.6782)"
+                                        class="st4" width="34.7" height="41.8" />
+
+                                    <rect x="391.2" y="1151.9"
+                                        transform="matrix(4.967193e-03 -1 1 4.967193e-03 -751.5641 1561.009)" class="st5"
+                                        width="34.7" height="12.5" />
+                                </g>
+                                <g>
+
+                                    <rect x="428" y="864.2"
+                                        transform="matrix(4.967193e-03 -1 1 4.967193e-03 -462.8264 1346.8601)"
+                                        class="st3" width="34.7" height="83.6" />
+
+                                    <rect x="448.9" y="885.2"
+                                        transform="matrix(4.967193e-03 -1 1 4.967193e-03 -442.1445 1367.8525)"
+                                        class="st4" width="34.7" height="41.8" />
+
+                                    <rect x="392.5" y="899.5"
+                                        transform="matrix(4.967167e-03 -1 1 4.967167e-03 -497.9812 1311.1775)"
+                                        class="st5" width="34.7" height="12.5" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <path id="XMLID_5_"
+                                        d="M571.2,856.7l-1.7,352.1c0,6-4.9,10.9-11,10.9l-61.7-0.3c-6,0-10.9-4.9-10.9-11l1.7-352.1       c0-6,4.9-10.9,11-10.9l61.7,0.3C566.4,845.8,571.2,850.7,571.2,856.7z" />
+                                </defs>
+                                <use xlink:href="#XMLID_5_" style="overflow:visible;fill:#F7941D;" />
+                                <clipPath id="XMLID_00000023274750980574227660000012301422672842578863_">
+                                    <use xlink:href="#XMLID_5_" style="overflow:visible;" />
+                                </clipPath>
+
+                                <rect x="357.6" y="1004.4"
+                                    transform="matrix(4.967462e-03 -1 1 4.967462e-03 -478.5757 1584.557)"
+                                    style="clip-path:url(#XMLID_00000023274750980574227660000012301422672842578863_);fill:#F26522;"
+                                    width="398.7" height="56.8" />
+                                <path
+                                    style="clip-path:url(#XMLID_00000023274750980574227660000012301422672842578863_);fill:#F9AB5D;"
+                                    d="M500.2,855.9      l-1.8,353c0,9-7.4,16.2-16.4,16.2l0,0c-9,0-16.2-7.4-16.2-16.4l1.8-353c0-9,7.4-16.2,16.4-16.2l0,0      C493,839.6,500.2,846.9,500.2,855.9z" />
+                            </g>
+                            <g>
+                                <g>
+
+                                    <rect x="510.5" y="1117"
+                                        transform="matrix(4.968498e-03 -1 1 4.968498e-03 -633.4384 1680.9075)"
+                                        class="st3" width="34.7" height="83.6" />
+
+                                    <rect x="531.4" y="1138"
+                                        transform="matrix(4.968498e-03 -1 1 4.968498e-03 -612.7567 1701.8999)"
+                                        class="st4" width="34.7" height="41.8" />
+
+                                    <rect x="475" y="1152.3"
+                                        transform="matrix(4.961920e-03 -1 1 4.961920e-03 -668.5901 1645.2324)"
+                                        class="st5" width="34.7" height="12.5" />
+                                </g>
+                                <g>
+
+                                    <rect x="511.8" y="864.6"
+                                        transform="matrix(4.967193e-03 -1 1 4.967193e-03 -379.855 1431.0773)"
+                                        class="st3" width="34.7" height="83.6" />
+
+                                    <rect x="532.7" y="885.6"
+                                        transform="matrix(4.967193e-03 -1 1 4.967193e-03 -359.1731 1452.0697)"
+                                        class="st4" width="34.7" height="41.8" />
+
+                                    <rect x="476.3" y="900"
+                                        transform="matrix(4.967167e-03 -1 1 4.967167e-03 -415.0099 1395.3945)"
+                                        class="st5" width="34.7" height="12.5" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <path id="XMLID_4_"
+                                        d="M654.2,857.2l-1.7,352.1c0,6-4.9,10.9-11,10.9l-61.7-0.3c-6,0-10.9-4.9-10.9-11l1.7-352.1       c0-6,4.9-10.9,11-10.9l61.7,0.3C649.4,846.2,654.2,851.1,654.2,857.2z" />
+                                </defs>
+                                <use xlink:href="#XMLID_4_" style="overflow:visible;fill:#F7941D;" />
+                                <clipPath id="XMLID_00000156559478051370484640000006587934642431787677_">
+                                    <use xlink:href="#XMLID_4_" style="overflow:visible;" />
+                                </clipPath>
+
+                                <rect x="440.6" y="1004.8"
+                                    transform="matrix(4.967462e-03 -1 1 4.967462e-03 -396.3818 1667.985)"
+                                    style="clip-path:url(#XMLID_00000156559478051370484640000006587934642431787677_);fill:#F26522;"
+                                    width="398.7" height="56.8" />
+                                <path
+                                    style="clip-path:url(#XMLID_00000156559478051370484640000006587934642431787677_);fill:#F9AB5D;"
+                                    d="M583.2,856.3      l-1.8,353c0,9-7.4,16.2-16.4,16.2l0,0c-9,0-16.2-7.4-16.2-16.4l1.8-353c0-9,7.4-16.2,16.4-16.2h0      C576,840,583.3,847.4,583.2,856.3z" />
+                            </g>
+                            <g>
+                                <g>
+
+                                    <rect x="593.6" y="1117.4"
+                                        transform="matrix(4.967167e-03 -1 1 4.967167e-03 -551.244 1764.3368)"
+                                        class="st3" width="34.7" height="83.6" />
+
+                                    <rect x="614.5" y="1138.4"
+                                        transform="matrix(4.967167e-03 -1 1 4.967167e-03 -530.5621 1785.3293)"
+                                        class="st4" width="34.7" height="41.8" />
+
+                                    <rect x="558.1" y="1152.7"
+                                        transform="matrix(4.961920e-03 -1 1 4.961920e-03 -586.396 1728.6602)"
+                                        class="st5" width="34.7" height="12.5" />
+                                </g>
+                                <g>
+
+                                    <rect x="594.8" y="865"
+                                        transform="matrix(4.972466e-03 -1 1 4.972466e-03 -297.6643 1514.5004)"
+                                        class="st3" width="34.7" height="83.6" />
+
+                                    <rect x="615.7" y="886"
+                                        transform="matrix(4.972466e-03 -1 1 4.972466e-03 -276.9826 1535.4928)"
+                                        class="st4" width="34.7" height="41.8" />
+
+                                    <rect x="559.3" y="900.4"
+                                        transform="matrix(4.967167e-03 -1 1 4.967167e-03 -332.8162 1478.8223)"
+                                        class="st5" width="34.7" height="12.5" />
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <path class="st10"
+                            d="M703.4,1039.4H302.8V902.1l413-555.2h218.3v517.8h123.5v174.7H934.2V1219H703.4V1039.4z M737,864.7V615.1    L553.6,864.7H737z" />
+                        <path class="st10"
+                            d="M1283.5,1183.5c-60.7-36.2-107.5-88.4-140.4-156.6c-32.9-68.2-49.3-149.3-49.3-243.3    c0-94,16.2-175.1,48.7-243.3c32.4-68.2,78.8-120.6,139.1-157.2c60.3-36.6,131.6-54.9,214-54.9c82.4,0,153.7,18.3,214,54.9    c60.3,36.6,106.7,89,139.1,157.2c32.4,68.2,48.7,149.3,48.7,243.3c0,94-16.4,175.1-49.3,243.3c-32.9,68.2-79.7,120.4-140.4,156.6    c-60.7,36.2-131.4,54.3-212.1,54.3C1414.9,1237.7,1344.2,1219.7,1283.5,1183.5z M1625.4,965.7c30.8-43.2,46.2-103.1,46.2-179.7    c0-77.4-15.2-138.3-45.5-182.8c-30.4-44.5-73.8-66.7-130.4-66.7c-56.6,0-100,22.3-130.4,66.7c-30.4,44.5-45.5,105.4-45.5,182.8    c0,76.5,15.4,136.4,46.2,179.7c30.8,43.3,74,64.9,129.8,64.9C1551.4,1030.6,1594.6,1009,1625.4,965.7z" />
+                        <path class="st10"
+                            d="M2334.1,1039.4h-400.5V902.1l413-555.2h218.3v517.8h123.5v174.7h-123.5V1219h-230.8V1039.4z M2367.8,864.7    V615.1l-183.4,249.5H2367.8z" />
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <g>
+                                    <g>
+                                        <defs>
+                                            <path id="XMLID_1_"
+                                                d="M1764.5,1074.5l-346.5,3.9c-5.9,0.1-10.8-4.7-10.9-10.6l-0.7-60.8c-0.1-5.9,4.7-10.8,10.6-10.9         l346.5-3.9c5.9-0.1,10.8,4.7,10.9,10.6l0.7,60.8C1775.2,1069.5,1770.5,1074.4,1764.5,1074.5z" />
+                                        </defs>
+                                        <use xlink:href="#XMLID_1_" style="overflow:visible;fill:#F7941D;" />
+                                        <clipPath id="XMLID_00000064354562779676940840000004677435764983285639_">
+                                            <use xlink:href="#XMLID_1_" style="overflow:visible;" />
+                                        </clipPath>
+
+                                        <rect x="1394.9" y="1035.3"
+                                            transform="matrix(0.9999 -1.113226e-02 1.113226e-02 0.9999 -11.7373 17.7782)"
+                                            style="clip-path:url(#XMLID_00000064354562779676940840000004677435764983285639_);fill:#F26522;"
+                                            width="392.5" height="55.9" />
+                                        <path
+                                            style="clip-path:url(#XMLID_00000064354562779676940840000004677435764983285639_);fill:#F9AB5D;"
+                                            d="M1764.2,1004.6        l-347.4,3.9c-8.8,0.1-16.1-7-16.2-15.8l0,0c-0.1-8.8,7-16.1,15.8-16.2l347.4-3.9c8.8-0.1,16.1,7,16.2,15.8l0,0        C1780.1,997.2,1773.1,1004.5,1764.2,1004.6z" />
+                                    </g>
+                                    <g>
+                                        <g>
+
+                                            <rect x="1449.5" y="995.5"
+                                                transform="matrix(0.9999 -1.113227e-02 1.113227e-02 0.9999 -11.4494 16.3911)"
+                                                class="st3" width="34.2" height="82.2" />
+
+                                            <rect x="1449.8" y="1036.6"
+                                                transform="matrix(0.9999 -1.113227e-02 1.113227e-02 0.9999 -11.6782 16.3949)"
+                                                class="st4" width="34.2" height="41.1" />
+
+                                            <rect x="1449.1" y="995.5"
+                                                transform="matrix(0.9999 -1.113233e-02 1.113233e-02 0.9999 -11.0604 16.3847)"
+                                                class="st5" width="34.2" height="12.3" />
+                                        </g>
+                                        <g>
+
+                                            <rect x="1697.9" y="992.8"
+                                                transform="matrix(0.9999 -1.113227e-02 1.113227e-02 0.9999 -11.4032 19.1557)"
+                                                class="st3" width="34.2" height="82.2" />
+
+                                            <rect x="1698.1" y="1033.9"
+                                                transform="matrix(0.9999 -1.113227e-02 1.113227e-02 0.9999 -11.632 19.1596)"
+                                                class="st4" width="34.2" height="41.1" />
+
+                                            <rect x="1697.5" y="992.8"
+                                                transform="matrix(0.9999 -1.113233e-02 1.113233e-02 0.9999 -11.0142 19.1493)"
+                                                class="st5" width="34.2" height="12.3" />
+                                        </g>
+                                    </g>
+                                </g>
+                                <g>
+                                    <g>
+                                        <defs>
+                                            <path id="XMLID_2_"
+                                                d="M1765.5,1156.9l-346.5,3.9c-5.9,0.1-10.8-4.7-10.9-10.6l-0.7-60.8c-0.1-5.9,4.7-10.8,10.6-10.9         l346.5-3.9c5.9-0.1,10.8,4.7,10.9,10.6l0.7,60.8C1776.1,1152,1771.4,1156.9,1765.5,1156.9z" />
+                                        </defs>
+                                        <use xlink:href="#XMLID_2_" style="overflow:visible;fill:#F7941D;" />
+                                        <clipPath id="XMLID_00000182491463367402363910000009567810663349478064_">
+                                            <use xlink:href="#XMLID_2_" style="overflow:visible;" />
+                                        </clipPath>
+
+                                        <rect x="1395.8" y="1117.7"
+                                            transform="matrix(0.9999 -1.113226e-02 1.113226e-02 0.9999 -12.6555 17.7936)"
+                                            style="clip-path:url(#XMLID_00000182491463367402363910000009567810663349478064_);fill:#F26522;"
+                                            width="392.5" height="55.9" />
+                                        <path
+                                            style="clip-path:url(#XMLID_00000182491463367402363910000009567810663349478064_);fill:#F9AB5D;"
+                                            d="M1765.1,1087        l-347.4,3.9c-8.8,0.1-16.1-7-16.2-15.8l0,0c-0.1-8.8,7-16.1,15.8-16.2l347.4-3.9c8.8-0.1,16.1,7,16.2,15.8l0,0        C1781.1,1079.7,1774,1086.9,1765.1,1087z" />
+                                    </g>
+                                    <g>
+                                        <g>
+
+                                            <rect x="1450.4" y="1078"
+                                                transform="matrix(0.9999 -1.113233e-02 1.113233e-02 0.9999 -12.3676 16.4065)"
+                                                class="st3" width="34.2" height="82.2" />
+
+                                            <rect x="1450.7" y="1119.1"
+                                                transform="matrix(0.9999 -1.113233e-02 1.113233e-02 0.9999 -12.5964 16.4104)"
+                                                class="st4" width="34.2" height="41.1" />
+
+                                            <rect x="1450.1" y="1078"
+                                                transform="matrix(0.9999 -1.113227e-02 1.113227e-02 0.9999 -11.9785 16.3999)"
+                                                class="st5" width="34.2" height="12.3" />
+                                        </g>
+                                        <g>
+
+                                            <rect x="1698.8" y="1075.2"
+                                                transform="matrix(0.9999 -1.113233e-02 1.113233e-02 0.9999 -12.3214 19.1712)"
+                                                class="st3" width="34.2" height="82.2" />
+
+                                            <rect x="1699" y="1116.4"
+                                                transform="matrix(0.9999 -1.113233e-02 1.113233e-02 0.9999 -12.5503 19.175)"
+                                                class="st4" width="34.2" height="41.1" />
+
+                                            <rect x="1698.4" y="1075.2"
+                                                transform="matrix(0.9999 -1.113227e-02 1.113227e-02 0.9999 -11.9323 19.1646)"
+                                                class="st5" width="34.2" height="12.3" />
+                                        </g>
+                                    </g>
+                                </g>
+                                <g>
+                                    <g>
+                                        <defs>
+                                            <path id="XMLID_3_"
+                                                d="M1766.4,1238.6l-346.5,3.9c-5.9,0.1-10.8-4.7-10.9-10.6l-0.7-60.8c-0.1-5.9,4.7-10.8,10.6-10.9         l346.5-3.9c5.9-0.1,10.8,4.7,10.9,10.6l0.7,60.8C1777,1233.7,1772.3,1238.6,1766.4,1238.6z" />
+                                        </defs>
+                                        <use xlink:href="#XMLID_3_" style="overflow:visible;fill:#F7941D;" />
+                                        <clipPath id="XMLID_00000029011980626541671730000011322360921549584805_">
+                                            <use xlink:href="#XMLID_3_" style="overflow:visible;" />
+                                        </clipPath>
+
+                                        <rect x="1396.7" y="1199.5"
+                                            transform="matrix(0.9999 -1.113226e-02 1.113226e-02 0.9999 -13.565 17.8087)"
+                                            style="clip-path:url(#XMLID_00000029011980626541671730000011322360921549584805_);fill:#F26522;"
+                                            width="392.5" height="55.9" />
+                                        <path
+                                            style="clip-path:url(#XMLID_00000029011980626541671730000011322360921549584805_);fill:#F9AB5D;"
+                                            d="M1766,1168.7        l-347.4,3.9c-8.8,0.1-16.1-7-16.2-15.8l0,0c-0.1-8.8,7-16.1,15.8-16.2l347.4-3.9c8.8-0.1,16.1,7,16.2,15.8l0,0        C1782,1161.4,1774.9,1168.6,1766,1168.7z" />
+                                    </g>
+                                    <g>
+                                        <g>
+
+                                            <rect x="1451.4" y="1159.7"
+                                                transform="matrix(0.9999 -1.113233e-02 1.113233e-02 0.9999 -13.2771 16.4217)"
+                                                class="st3" width="34.2" height="82.2" />
+
+                                            <rect x="1451.6" y="1200.8"
+                                                transform="matrix(0.9999 -1.113233e-02 1.113233e-02 0.9999 -13.506 16.4255)"
+                                                class="st4" width="34.2" height="41.1" />
+
+                                            <rect x="1451" y="1159.7"
+                                                transform="matrix(0.9999 -1.113227e-02 1.113227e-02 0.9999 -12.888 16.4151)"
+                                                class="st5" width="34.2" height="12.3" />
+                                        </g>
+                                        <g>
+
+                                            <rect x="1699.7" y="1157"
+                                                transform="matrix(0.9999 -1.113227e-02 1.113227e-02 0.9999 -13.2309 19.1863)"
+                                                class="st3" width="34.2" height="82.2" />
+
+                                            <rect x="1699.9" y="1198.1"
+                                                transform="matrix(0.9999 -1.113227e-02 1.113227e-02 0.9999 -13.4598 19.1901)"
+                                                class="st4" width="34.2" height="41.1" />
+
+                                            <rect x="1699.3" y="1157"
+                                                transform="matrix(0.9999 -1.113233e-02 1.113233e-02 0.9999 -12.8419 19.1799)"
+                                                class="st5" width="34.2" height="12.3" />
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                            <g>
+                                <g>
+                                    <g>
+                                        <defs>
+                                            <path id="XMLID_10_"
+                                                d="M2477.2,859.6l3.9,346.5c0.1,5.9-4.7,10.8-10.6,10.9l-60.8,0.7c-5.9,0.1-10.8-4.7-10.9-10.6         l-3.9-346.5c-0.1-5.9,4.7-10.8,10.6-10.9l60.8-0.7C2472.3,848.9,2477.2,853.7,2477.2,859.6z" />
+                                        </defs>
+                                        <use xlink:href="#XMLID_10_" style="overflow:visible;fill:#F7941D;" />
+                                        <clipPath id="XMLID_00000157279880806038058670000017207414153351496614_">
+                                            <use xlink:href="#XMLID_10_" style="overflow:visible;" />
+                                        </clipPath>
+
+                                        <rect x="2269.8" y="1005.1"
+                                            transform="matrix(-1.113226e-02 -0.9999 0.9999 -1.113226e-02 1460.464 3510.3906)"
+                                            style="clip-path:url(#XMLID_00000157279880806038058670000017207414153351496614_);fill:#F26522;"
+                                            width="392.5" height="55.9" />
+                                        <path
+                                            style="clip-path:url(#XMLID_00000157279880806038058670000017207414153351496614_);fill:#F9AB5D;"
+                                            d="M2407.3,859.9        l3.9,347.4c0.1,8.8-7,16.1-15.8,16.2l0,0c-8.8,0.1-16.1-7-16.2-15.8l-3.9-347.4c-0.1-8.8,7-16.1,15.8-16.2l0,0        C2400,844,2407.2,851.1,2407.3,859.9z" />
+                                    </g>
+                                    <g>
+                                        <g>
+
+                                            <rect x="2422.3" y="1116.4"
+                                                transform="matrix(-1.113762e-02 -0.9999 0.9999 -1.113762e-02 1309.1743 3609.6807)"
+                                                class="st3" width="34.2" height="82.2" />
+
+                                            <rect x="2442.9" y="1136.7"
+                                                transform="matrix(-1.113762e-02 -0.9999 0.9999 -1.113762e-02 1330.1923 3630.0078)"
+                                                class="st4" width="34.2" height="41.1" />
+
+                                            <rect x="2387.4" y="1151.7"
+                                                transform="matrix(-1.113227e-02 -0.9999 0.9999 -1.113227e-02 1273.4353 3575.1223)"
+                                                class="st5" width="34.2" height="12.3" />
+                                        </g>
+                                        <g>
+
+                                            <rect x="2419.6" y="868"
+                                                transform="matrix(-1.113233e-02 -0.9999 0.9999 -1.113233e-02 1554.71 3355.7852)"
+                                                class="st3" width="34.2" height="82.2" />
+
+                                            <rect x="2440.1" y="888.4"
+                                                transform="matrix(-1.113233e-02 -0.9999 0.9999 -1.113233e-02 1575.7278 3376.1125)"
+                                                class="st4" width="34.2" height="41.1" />
+
+                                            <rect x="2384.6" y="903.4"
+                                                transform="matrix(-1.113762e-02 -0.9999 0.9999 -1.113762e-02 1518.9968 3321.2375)"
+                                                class="st5" width="34.2" height="12.3" />
+                                        </g>
+                                    </g>
+                                </g>
+                                <g>
+                                    <g>
+                                        <defs>
+                                            <path id="XMLID_9_"
+                                                d="M2559.7,858.7l3.9,346.5c0.1,5.9-4.7,10.8-10.6,10.9l-60.8,0.7c-5.9,0.1-10.8-4.7-10.9-10.6         l-3.9-346.5c-0.1-5.9,4.7-10.8,10.6-10.9l60.8-0.7C2554.8,848,2559.7,852.7,2559.7,858.7z" />
+                                        </defs>
+                                        <use xlink:href="#XMLID_9_" style="overflow:visible;fill:#F7941D;" />
+                                        <clipPath id="XMLID_00000118377773601991931820000002602219222349226905_">
+                                            <use xlink:href="#XMLID_9_" style="overflow:visible;" />
+                                        </clipPath>
+
+                                        <rect x="2352.2" y="1004.2"
+                                            transform="matrix(-1.113180e-02 -0.9999 0.9999 -1.113180e-02 1544.7817 3591.9392)"
+                                            style="clip-path:url(#XMLID_00000118377773601991931820000002602219222349226905_);fill:#F26522;"
+                                            width="392.5" height="55.9" />
+                                        <path
+                                            style="clip-path:url(#XMLID_00000118377773601991931820000002602219222349226905_);fill:#F9AB5D;"
+                                            d="M2489.8,859        l3.9,347.4c0.1,8.8-7,16.1-15.8,16.2h0c-8.8,0.1-16.1-7-16.2-15.8l-3.9-347.4c-0.1-8.8,7-16.1,15.8-16.2l0,0        C2482.5,843.1,2489.7,850.2,2489.8,859z" />
+                                    </g>
+                                    <g>
+                                        <g>
+
+                                            <rect x="2504.8" y="1115.5"
+                                                transform="matrix(-1.113233e-02 -0.9999 0.9999 -1.113233e-02 1393.4803 3691.2234)"
+                                                class="st3" width="34.2" height="82.2" />
+
+                                            <rect x="2525.4" y="1135.8"
+                                                transform="matrix(-1.113233e-02 -0.9999 0.9999 -1.113233e-02 1414.498 3711.5508)"
+                                                class="st4" width="34.2" height="41.1" />
+
+                                            <rect x="2469.9" y="1150.8"
+                                                transform="matrix(-1.112691e-02 -0.9999 0.9999 -1.112691e-02 1357.7408 3656.665)"
+                                                class="st5" width="34.2" height="12.3" />
+                                        </g>
+                                        <g>
+
+                                            <rect x="2502.1" y="867.1"
+                                                transform="matrix(-1.113233e-02 -0.9999 0.9999 -1.113233e-02 1639.0289 3437.334)"
+                                                class="st3" width="34.2" height="82.2" />
+
+                                            <rect x="2522.6" y="887.4"
+                                                transform="matrix(-1.113233e-02 -0.9999 0.9999 -1.113233e-02 1660.0466 3457.6614)"
+                                                class="st4" width="34.2" height="41.1" />
+
+                                            <rect x="2467.1" y="902.4"
+                                                transform="matrix(-1.113233e-02 -0.9999 0.9999 -1.113233e-02 1603.303 3402.7817)"
+                                                class="st5" width="34.2" height="12.3" />
+                                        </g>
+                                    </g>
+                                </g>
+                                <g>
+                                    <g>
+                                        <defs>
+                                            <path id="XMLID_8_"
+                                                d="M2641.4,857.8l3.9,346.5c0.1,5.9-4.7,10.8-10.6,10.9l-60.8,0.7c-5.9,0.1-10.8-4.7-10.9-10.6         l-3.9-346.5c-0.1-5.9,4.7-10.8,10.6-10.9l60.8-0.7C2636.5,847.1,2641.4,851.8,2641.4,857.8z" />
+                                        </defs>
+                                        <use xlink:href="#XMLID_8_" style="overflow:visible;fill:#F7941D;" />
+                                        <clipPath id="XMLID_00000035519741194337082430000015727918058818578051_">
+                                            <use xlink:href="#XMLID_8_" style="overflow:visible;" />
+                                        </clipPath>
+
+                                        <rect x="2434" y="1003.3"
+                                            transform="matrix(-1.113180e-02 -0.9999 0.9999 -1.113180e-02 1628.3104 3672.7239)"
+                                            style="clip-path:url(#XMLID_00000035519741194337082430000015727918058818578051_);fill:#F26522;"
+                                            width="392.5" height="55.9" />
+                                        <path
+                                            style="clip-path:url(#XMLID_00000035519741194337082430000015727918058818578051_);fill:#F9AB5D;"
+                                            d="M2571.5,858.1        l3.9,347.4c0.1,8.8-7,16.1-15.8,16.2l0,0c-8.8,0.1-16.1-7-16.2-15.8l-3.9-347.4c-0.1-8.8,7-16.1,15.8-16.2l0,0        C2564.2,842.2,2571.4,849.3,2571.5,858.1z" />
+                                    </g>
+                                    <g>
+                                        <g>
+
+                                            <rect x="2586.5" y="1114.6"
+                                                transform="matrix(-1.112697e-02 -0.9999 0.9999 -1.112697e-02 1476.995 3772.002)"
+                                                class="st3" width="34.2" height="82.2" />
+
+                                            <rect x="2607.1" y="1134.9"
+                                                transform="matrix(-1.112697e-02 -0.9999 0.9999 -1.112697e-02 1498.0126 3792.3293)"
+                                                class="st4" width="34.2" height="41.1" />
+
+                                            <rect x="2551.6" y="1149.9"
+                                                transform="matrix(-1.113762e-02 -0.9999 0.9999 -1.113762e-02 1441.2966 3737.4617)"
+                                                class="st5" width="34.2" height="12.3" />
+                                        </g>
+                                        <g>
+
+                                            <rect x="2583.8" y="866.2"
+                                                transform="matrix(-1.113233e-02 -0.9999 0.9999 -1.113233e-02 1722.5576 3518.1187)"
+                                                class="st3" width="34.2" height="82.2" />
+
+                                            <rect x="2604.3" y="886.5"
+                                                transform="matrix(-1.113233e-02 -0.9999 0.9999 -1.113233e-02 1743.5754 3538.446)"
+                                                class="st4" width="34.2" height="41.1" />
+
+                                            <rect x="2548.8" y="901.5"
+                                                transform="matrix(-1.113233e-02 -0.9999 0.9999 -1.113233e-02 1686.8317 3483.5664)"
+                                                class="st5" width="34.2" height="12.3" />
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                            <path class="st23"
+                                d="M199.6,1686.3c-75.2,0-136.4-61.2-136.4-136.4c0-75.2,61.2-136.4,136.4-136.4h1605.9     c51.5,0,93.4-41.9,93.4-93.4v-9.1h138.4c50.2,0,91-40.8,91-91V844.1c0-49,39.8-88.8,88.8-88.8h261.5c17.2,0,31.3,14,31.3,31.3     v1.5h-38.4c-22.8,0-41.3,18.5-41.3,41.3v20h15v-20c0-14.5,11.8-26.3,26.3-26.3h38.4v46.2h15V803h40.4c14.5,0,26.3,11.8,26.3,26.3     v18.2h15v-18.2c0-22.8-18.5-41.3-41.3-41.3h-40.4v-1.5c0-25.5-20.8-46.3-46.3-46.3h-261.5c-57.3,0-103.8,46.6-103.8,103.8v375.8     c0,41.9-34.1,76-76,76h-138.4v-112.2c0-36.1-25.4-66.3-59.3-73.7v-43.7c0-23.8-19.3-43.1-43.1-43.1H1773v15h23.5     c15.5,0,28.1,12.6,28.1,28.1v42c-0.4,0-0.8,0-1.2,0h-49.5v15h49.5c0.4,0,0.8,0,1.2,0v45.4c0,11.9-9.6,21.5-21.5,21.5h-28.3v15     h28.3c20.1,0,36.5-16.4,36.5-36.5v-43.2c25.5,7.1,44.3,30.5,44.3,58.2V1320c0,43.2-35.2,78.4-78.4,78.4H812.7V900.7     c0-52.4-42.6-95-95-95h-76c-22.3,0-40.5,18.2-40.5,40.5h15c0-14,11.4-25.5,25.5-25.5h76c44.1,0,80,35.9,80,80v497.8H199.6     c-83.5,0-151.4,67.9-151.4,151.4c0,83.5,67.9,151.4,151.4,151.4h2662.2v-15H199.6z" />
+                        </g>
+                        <g>
+                            <rect x="2804.7" y="1459.9" class="st3" width="15.6" height="89.5" />
+                            <rect x="2776.6" y="1549.4" class="st4" width="71.8" height="13.6" />
+                            <rect x="2775.7" y="1446.3" class="st4" width="71.8" height="13.6" />
+                            <path class="st24"
+                                d="M2916,1576.6H2709c-3.8,0-6.8-3-6.8-6.8l0,0c0-3.8,3-6.8,6.8-6.8H2916c3.8,0,6.8,3,6.8,6.8l0,0     C2922.8,1573.5,2919.7,1576.6,2916,1576.6z" />
+                            <path class="st24"
+                                d="M2916,1781.3H2709c-3.8,0-6.8-3-6.8-6.8l0,0c0-3.8,3-6.8,6.8-6.8H2916c3.8,0,6.8,3,6.8,6.8l0,0     C2922.8,1778.3,2919.7,1781.3,2916,1781.3z" />
+                            <rect x="2716" y="1576.6" class="st25" width="191.1" height="191.1" />
+                            <g>
+                                <defs>
+                                    <path id="XMLID_7_"
+                                        d="M2877.6,1446.3h-132.1c-2,0-3.7-1.6-3.7-3.7v-30.3c0-2,1.6-3.7,3.7-3.7h132.1c2,0,3.7,1.6,3.7,3.7v30.3       C2881.2,1444.7,2879.6,1446.3,2877.6,1446.3z" />
+                                </defs>
+                                <use xlink:href="#XMLID_7_" style="overflow:visible;fill:#F26522;" />
+                                <clipPath id="XMLID_00000020398872646035495210000017569572873767195033_">
+                                    <use xlink:href="#XMLID_7_" style="overflow:visible;" />
+                                </clipPath>
+                                <path
+                                    style="clip-path:url(#XMLID_00000020398872646035495210000017569572873767195033_);fill:#F7941D;"
+                                    d="M2886.6,1422.1      h-142.1c-6.4,0-11.7-5.2-11.7-11.7l0,0c0-6.4,5.2-11.7,11.7-11.7h142.1c6.4,0,11.7,5.2,11.7,11.7l0,0      C2898.3,1416.9,2893.1,1422.1,2886.6,1422.1z" />
+                            </g>
+                            <polygon class="st27"
+                                points="2735.3,1576.6 2735.3,1594.4 2856.7,1594.4 2856.7,1753.1 2735.3,1753.1 2735.3,1767.7      2907.1,1767.7 2907.1,1576.6    " />
+                            <g>
+                                <rect x="2745.3" y="1576.6" class="st24" width="8.3" height="191.1" />
+                                <rect x="2786.6" y="1576.6" class="st24" width="8.3" height="191.1" />
+                                <rect x="2829.1" y="1576.6" class="st24" width="8.3" height="191.1" />
+                                <rect x="2870.5" y="1576.6" class="st24" width="8.3" height="191.1" />
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </div>
+        <footer class=''>
+
+
+            <div class='ontop' style='display: flex;
+          flex-direction: column;
+         align-items: center;'>
+                <div class="footerIcon">
+                    <a name="footerFacebook" class="facebook" href='https://www.facebook.com/mohamedhelal1707'><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a name="footerYoutube" class="youtube" href='https://www.youtube.com/@dr.mohamedhelal1707'><i
+                            class="fa-brands fa-youtube"></i></a>
+                    <a name="footerTelegram"  class="telegram" href='https://t.me/drmohamed_helal1707'><i class="fa-brands fa-telegram"></i></a>
+                    <a class="whatsapp" href="https://wa.me/+201227576688"><i class="fa-brands fa-whatsapp"></i></a>
+
+                </div>
+                <div class="copyRight" style="border: none">
+                    <div class='crParent'>
+                        <p class='crTeacher'>جميع حقوق المحتوى محفوظة لأستاذ أحمد الفواخري 2024</p>
+                        <span class='space'>|</span>
+                        <p style='direction:ltr'>
+                            Made with
+                            <span class='heart'><i class="fa-solid fa-heart"></i></span>
+                            By
+                            <a href="https://www.facebook.com/Zircon-EG-101399962387593">Zircon Tech</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
+
+    <script src="https://alfawakhry-math.com/js/all.min.js"></script>
+    <script src="https://alfawakhry-math.com/js/jquery.min.js"></script>
+
+    <script src="https://alfawakhry-math.com/js/bootstrap.bundle.min.js"></script>
+
+        <script src="https://alfawakhry-math.com/js/pageNotFound.js"></script>
+    
+</body>
+
+</html>

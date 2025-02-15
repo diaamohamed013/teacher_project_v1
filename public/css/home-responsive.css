@@ -1,0 +1,554 @@
+@media (max-width: 1590px) {
+    .semArrow {
+        transform: translate(10%, 26%);
+        width: 20rem;
+    }
+    /****** header ******/
+    .teacherBrnad h1 {
+        font-size: 6.4rem;
+    }
+}
+@media (max-width: 1490px) {
+    .bigHeading {
+        font-size: 6rem;
+    }
+
+    .type {
+        font-size: 2.8rem;
+    }
+
+    .headerSubjects {
+        font-size: 2.2rem;
+    }
+
+    /****** semester *******/
+    .semester {
+        width: 100%;
+    }
+}
+/****** header ******/
+@media (max-width: 1360px) {
+    .teachName {
+        font-size: 3rem;
+    }
+    .teachSub {
+        font-size: 10rem;
+    }
+}
+
+@media (max-width: 1120px) {
+    .circleLogo {
+        right: 50%;
+        transform: translate(50%, 30%);
+        width: 13rem;
+    }
+    .latestHead {
+        padding: 2rem;
+    }
+    .leftArrow {
+        width: 36rem;
+    }
+    .bigHeading {
+        font-size: 5rem;
+    }
+
+    .type {
+        font-size: 2.2rem;
+    }
+
+    .headerSubjects {
+        font-size: 2rem;
+    }
+
+    .contactUs p {
+        font-size: 1.8rem;
+    }
+
+    .headerIcons {
+        font-size: 3.4rem;
+    }
+
+    .headerIcons {
+        margin: 0 auto;
+    }
+
+    /****** semester *******/
+    .tree {
+        width: 100%;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 991.5px) {
+    .mobileHeroImg {
+        display: flex;
+        margin: 0 auto 4rem;
+    }
+    .firstBoxParent,
+    .secondBoxParent {
+        display: none;
+    }
+    .headerLeftSide {
+        top: 0;
+    }
+    /**** header ****/
+    .headerRightSide {
+        order: 2;
+        margin-top: 0rem;
+    }
+    .teacherContent {
+        text-align: center !important;
+    }
+    .teacherSub {
+        margin: 0 auto;
+    }
+    .teacherAbout {
+        width: 60%;
+        margin: 0 auto;
+        order: 1;
+    }
+    .teacher {
+        width: 80%;
+    }
+    .teacherSub {
+        text-align: center;
+    }
+
+    .headerContent {
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+    header {
+        padding: 14rem 0 10rem;
+    }
+    .teachSub {
+        font-size: 8rem;
+    }
+    .teachName {
+        font-size: 2.4rem;
+    }
+    .headerIcons {
+        font-size: 2.8rem;
+    }
+    .headerMainBg {
+        width: 50%;
+        min-width: 30rem;
+        margin: 0 auto;
+    }
+    .leftLayer {
+        bottom: 0;
+        top: auto;
+    }
+    .rightLayer {
+        top: auto;
+        bottom: 0;
+    }
+    .triangles {
+        display: none;
+    }
+
+    .headerSvg {
+        display: none;
+    }
+
+    .customeSquareLine::after {
+        right: 0;
+        width: 100vw;
+        height: 65%;
+        top: 35%;
+    }
+
+    .headerRightSide {
+        position: relative;
+        padding: 0;
+        /* left: 15px; */
+    }
+
+    .bigHeading {
+        margin: 0 auto;
+        /* background: #fff; */
+        text-align: right;
+        padding: 13rem 2rem;
+        /* clip-path: polygon(0 0, 100% 25%, 100% 75%, 0% 100%); */
+    }
+
+    .headerImage img {
+        height: 100%;
+        object-position: center;
+    }
+    .rightImgs {
+        max-width: 35rem;
+        width: 100%;
+    }
+    .middleImg {
+        max-width: 37rem;
+    }
+    .topRightImg,
+    .rightBottomImg,
+    .leftImgs {
+        display: none;
+    }
+    .mobileImage {
+        display: block;
+    }
+    /***** testimonial ****/
+    .testimonials .row {
+        background-position: center;
+    }
+    .testimonialsParent {
+        flex-direction: column;
+    }
+    .title {
+        text-align: center;
+        align-items: center;
+    }
+    .latestLectureTitle {
+        flex-direction: column;
+    }
+    .realSwiper {
+        width: 100%;
+    }
+    .testimonials {
+        padding: 10rem 0;
+        margin-top: 0;
+    }
+    .edge {
+        min-width: 213rem;
+    }
+    .testimonial {
+        margin: 0 auto;
+    }
+}
+@media (max-width: 767px) {
+    /**  header **/
+
+    .teacherAbout {
+        width: 75%;
+        margin: 0 auto;
+        order: 1;
+    }
+    .teacher {
+        width: 100%;
+        padding: 0 2rem;
+    }
+    .teacherBrnad h1 {
+        font-size: 3.8rem;
+    }
+    .teacher p {
+        font-size: 1.8rem;
+    }
+    /****** semester *******/
+    .semester {
+        width: 100%;
+    }
+    /**** latest lectures ****/
+    .latestHead {
+        font-size: 2.8rem;
+    }
+    .shape2,
+    .shape1 {
+        width: 10rem;
+    }
+    .middleTitle {
+        font-size: 10.2rem;
+    }
+}
+@media (max-width: 550px) {
+    html {
+        font-size: 55% !important;
+    }
+    .heroActions {
+        justify-content: center;
+    }
+    .teacher p {
+        text-align: center;
+    }
+    .latestLectureTitle {
+        flex-direction: column;
+        justify-content: center;
+    }
+    /**  header **/
+    .mobileImage {
+        max-width: 27rem;
+        margin: 0 auto;
+    }
+    .teacherAbout {
+        width: 85%;
+        margin: 0 auto;
+        order: 1;
+    }
+
+    .teacherBrnad h1 {
+        font-size: 4.6rem;
+    }
+    html:lang(en) .teacherBrnad h1 {
+        font-size: 2.5rem;
+    }
+    .teacher p {
+        font-size: 1.7rem;
+    }
+    html:lang(en) .teacher p {
+        font-size: 1.5rem;
+    }
+    /****** semester *******/
+    .semester {
+        width: 100%;
+    }
+    .semArrow {
+        transform: translate(10%, 45%);
+        width: 18rem;
+    }
+}
+@media (max-width: 460px) {
+    .teacherAbout {
+        width: 100%;
+    }
+    .headerImage img {
+        width: 100%;
+    }
+
+    .bigHeading {
+        font-size: 4.4rem;
+    }
+
+    .headerSubjects {
+        font-size: 1.8rem;
+    }
+    .teacherBrnad h1 {
+        font-size: 2.8rem;
+    }
+    .teacher p {
+        font-size: 1.6rem;
+    }
+    /****** semester *******/
+    .semester {
+        width: 100%;
+    }
+    .semesterCount span:first-of-type {
+        font-size: 3.2rem;
+    }
+    .semesterName {
+        font-size: 2.6rem;
+    }
+    .semester span:last-of-type {
+        font-size: inherit;
+    }
+    .semesterImg {
+        width: 9rem;
+        height: 9rem;
+    }
+}
+
+@media (max-width: 1420px) {
+    .main {
+        overflow: visible !important;
+    }
+}
+
+/**********************************
+*********** header boxs***********
+**********************************/
+
+@media (max-width: 1430px) {
+    .subjectBox {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1340px) {
+    .subjectHeading {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .subjectBox {
+        width: 80%;
+    }
+    .teacherBrnad h1 {
+        font-size: 5.2rem;
+    }
+    .teacher p {
+        font-size: 2rem;
+    }
+    .heroDetails {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .headerIcons {
+        display: none;
+    }
+    .teacherContent {
+        max-width: 100%;
+    }
+    .teacher p {
+        font-size: 1.6rem;
+    }
+    .teacherBrnad h1 {
+        font-size: 4.2rem;
+    }
+    html {
+        font-size: 50%;
+    }
+    header {
+        /* padding-bottom: 21rem; */
+    }
+    .latestLectures {
+        padding: 9rem 0;
+    }
+    .rightLayer {
+        display: none;
+    }
+    .leftLayer {
+        display: none;
+    }
+    .subjectBox {
+        width: 95%;
+    }
+    .mobileLayer {
+        display: block;
+    }
+    .headerContentCol {
+        position: absolute;
+        bottom: 0;
+        z-index: 9;
+    }
+}
+
+@media (max-width: 575px) {
+    .subjectBox {
+        width: 70%;
+    }
+    .latestHead h2 {
+        align-items: center;
+    }
+    .latestHead {
+        flex-direction: column;
+    }
+    .allHead {
+        display: none;
+    }
+    .leftArrow {
+        display: none;
+    }
+}
+
+/**********************************
+*********** testimonial boxs***********
+**********************************/
+@media (max-width: 1430px) {
+    .testiHeading {
+        font-size: 4.6rem;
+    }
+
+    .leftHeading {
+        font-size: 4.6rem;
+    }
+
+    .testiText {
+        font-size: 2.4rem;
+        width: 80%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .testiHeading {
+        font-size: 4rem;
+    }
+
+    .leftHeading {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 1199px) {
+    .mounPic {
+        display: none;
+    }
+    .leftTesti {
+        padding: 0;
+    }
+
+    .testiHeading {
+        font-size: 3.6rem;
+    }
+
+    .leftHeading {
+        font-size: 3.6rem;
+    }
+
+    .testiText {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .testimonials .row {
+        padding: 15rem 6rem 20rem;
+    }
+
+    .testiBoxs {
+        width: 95%;
+    }
+
+    .testiText {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .testimonials .row {
+        padding: 7rem 6rem 20rem;
+    }
+
+    .testiHeading {
+        align-items: center;
+        text-align: center;
+        font-size: 4.6rem;
+    }
+
+    .leftTesti {
+        display: none;
+    }
+
+    .testiHeading .underLine {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cards .main {
+        padding: 0 8rem !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .testiBoxs {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 550px) {
+    .testiHeading {
+        font-size: 3.8rem;
+    }
+
+    .testiBoxs {
+        width: 90%;
+    }
+    .cards .main {
+        padding: 0 2rem !important;
+    }
+    .latestHead h2 {
+        text-align: center;
+        font-size: 3.2rem;
+    }
+}
+@media (max-width: 450px) {
+    .cards .main {
+        padding: 0 0.5rem !important;
+    }
+}
