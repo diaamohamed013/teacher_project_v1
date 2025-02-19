@@ -3,6 +3,8 @@
 @section('title', 'Courses')
 
 @section('content')
+    <x-header title="إضافة كورس جديد"></x-header>
+
     <div class="content-wrapper">
 
         <!-- Main content -->

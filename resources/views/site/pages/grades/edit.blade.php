@@ -3,6 +3,8 @@
 @section('title', 'Grades')
 
 @section('content')
+    <x-header title="تعديل الصف الدراسي"></x-header>
+
     <div class="content-wrapper">
 
         <!-- Main content -->

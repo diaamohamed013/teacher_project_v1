@@ -4,6 +4,8 @@
 
 
 @section('content')
+    <x-header title="الكورسات"></x-header>
+
     <div class="content-wrapper">
 
         <!-- Main content -->

@@ -88,22 +88,303 @@
                             </a>
                         </div>
                     @endguest
-                    {{-- @dd(auth()->user()->is_teacher) --}}
+
+
                     @auth
-                        @if (auth()->user()->is_teacher == 1)
-                            <a href="{{route('courses.index')}}">
-                                Courses
-                            </a>
+                        @if (auth()->user()?->is_teacher == 0)
+                            <div class="studentInfo">
+                                <div class="studentBtn">
+                                    <button role="button" type="button" class="btn ftu-btn lineParent" data-toggle="dropdown">
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class='studentIcon'>
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35"
+                                         style="enable-background:new 0 0 35 35;" xml:space="preserve">
+                                        <style type="text/css">
+
+                                        </style>
+                                        <g id="Layer_1" class="st0">
+
+                                            <image style="display:inline;overflow:visible;" width="33"
+                                                   height="34"
+                                                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAiCAYAAADRcLDBAAAABHNCSVQICAgIfAhkiAAAA1JJREFU
+                                                    WEe9l1uITVEYx88Z1yKJ3Ckl1ycvKLcoCSG8uRQlGTxQitwyjnhASiHX3ApPCg1PauRWLokoMmea
+                                                    ByW3MA0zbjP+P76t7Tiz1tr7yFe/1p5Z3/et/15nrW+tnc0kt64KmStmiuGii6gXj8UlcUbUJEmb
+                                                    TeDcSr7zxBHR1hO3Sf27RGNI/lARbZRsj1gWS/pezy9Fg4nqphYiu6aHqeKjT0ioiM1KVGHJvqrl
+                                                    TXeI5oIBZuvv06KdIPd5wf8K/f4ICxExThFVokx8Ef3FC8fbtVffc8HaYfCl4rBrNkJEVCrBNPFd
+                                                    jBa3XQmtr4faatFRsEgHlCKCZLxVa/FAsBtC7ZQcF5jzWLU3Wgr0zcQMBV6w4HK1B0MVmOD75r9B
+                                                    7fa0ItgN+y14oE1xAh0/tyiLFPG8RFHzzcRyRe2zSH7XREVI/mxfFuohwQJNJYLtdc4iF6o9mWAa
+                                                    Bsv3ifmzxXNpRfRTYK1ge94RIxOIOBB7+0l6vpJWBHFXxXjBFkWUq0ZE4yD6negkqKo9XeJ9a4LY
+                                                    KeKyJfmgtq/gwHIZNSKqDav1vLtUEQjdK1ikGG9I4uOisBxP1P9OmFDiquwlPpcqgvgOgkU5J5as
+                                                    Vs8PBQcZ/cPE0Fg/xW2yeOUSQF/Iz4EflXOJ2OpLaP3H1K4SdSH+PhG9lGSdYI+3dIdoUt8nQQ2h
+                                                    NFNXuOAEm0vELGU5Krg5Yfz+TO09wQ3qumABeu8LPjXFRLC9WM0rY4NziG0TSc4O39i/+4uJ4C25
+                                                    EWHfTNDa4Iy/HDkvKNch1lwoguN3vuD/FKcJgmlPasxcb8vji22Ki5gu74sWwRVuhGCbpbE3CuJm
+                                                    FWSRCFTnY1NImeaimtYGKXBI4Ew0RiK4xi+2Edeo3Zl29DRxiKDSPTLVb9X2Ec4ym2YgVwwi2Hrr
+                                                    BUWHm/XNUgfJ5asrM9ksl+MQa0AER213wWKKf7yEJCjqk6vJc9pyjAcZIqKT8Kye+cYs2bbkn1Vk
+                                                    smXcxPzWnKmPixjzL34K/6h/e8RFcFbw2fbfDREsSFpuxnxdOb8biyjE/5bg2yIyPnoWCb7kffaa
+                                                    wbkjbPR5evoRwiX4rvlx++ocmhMRqOUjZ4Wg0nGKJjEEPBWjRHSJofyzRUNy1f0A3Buhi0E41pMA
+                                                    AAAASUVORK5CYII="
+                                                   transform="matrix(1 0 0 1 0.6921 0.5)">
+                                            </image>
+                                        </g>
+                                        <g id="Layer_2">
+                                            <path class="st1"
+                                                  d="M17.91,33.23H2.34c-1.3-2.35,3.94-14.71,10.85-16.21" />
+                                            <circle class="st1" cx="17.5" cy="9.85" r="8.36" />
+                                            <path class="st1" d="M22.32,22.51h10.6H22.32z" />
+                                            <path class="st2" d="M22.32,27.87h10.6H22.32z" />
+                                            <path class="st1" d="M22.32,32.64h10.6H22.32z" />
+                                        </g>
+                                    </svg>
+
+                                </span>
+                                        <span class='studentName'>احمد الصغير عبد العال الصغير</span>
+                                    </button>
+                                    <ul class="dropdown-menu navDrop">
+                                        <li>
+                                            <a class="dropdown-item navDropItem lineParent" href="https://alfawakhry-math.com/profile">
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class='navDropIcon'>
+                                            <i class="fa-solid fa-house-chimney-user"></i>
+
+                                        </span>
+                                                الملف الشخصي
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item navDropItem lineParent"
+                                               href="https://alfawakhry-math.com/my-courses">
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class='navDropIcon'>
+                                            <i class="fa-solid fa-graduation-cap"></i>
+                                        </span>
+                                                محاضراتي
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:{}" onclick="window.logoutForm.submit()" class="dropdown-item navDropItem lineParent">
+                                                <form id="logoutForm" action="{{ route('logout') }}" class="regItem lineParent" method="POST">
+                                                    @csrf
+                                                    <span class="line"></span>
+                                                    <span class="line"></span>
+                                                    <span class="line"></span>
+                                                    <span class="line"></span>
+                                                    <span class='navDropIcon'>
+                                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                                    </span>تسجيل الخروج<span class=""></span>
+                                                </form>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mobDetails">
+                                    <div class="studentImage">
+                                        <a href="https://alfawakhry-math.com/profile">
+                                            <img width='100' height='100' src="https://alfawakhry-math.com/imgs/user.webp"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                    <h3 class='studentNameMob'>احمد الصغير عبد العال الصغير</h3>
+                                    <form class="search mobSearch" action="https://alfawakhry-math.com/search">
+                                        <input title="search" placeholder="ابحث هنا"
+                                               type="search" name="q" value="">
+                                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                                    </form>
+                                    <ul class=" navDrop">
+                                        <li>
+                                            <a class="dropdown-item navDropItem lineParent"
+                                               href="https://alfawakhry-math.com/profile">
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class='navDropIcon'>
+                                            <i class="fa-solid fa-house-chimney-user"></i>
+                                        </span>
+                                                الملف الشخصي
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item navDropItem lineParent"
+                                               href="https://alfawakhry-math.com/my-courses">
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class='navDropIcon'>
+                                            <i class="fa-solid fa-graduation-cap"></i>
+                                        </span>
+                                                محاضراتي
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:{}" onclick="window.logoutFrm.submit()"
+                                               class="dropdown-item navDropItem lineParent">
+                                                <form action="https://alfawakhry-math.com/logout" method="post">
+                                                    <input type="hidden" name="_token" value="GgvtMQT4GI37o2wa6og29zxUwfgenYUdoV7yagtT">                                                <span class="line"></span>
+                                                    <span class="line"></span>
+                                                    <span class="line"></span>
+                                                    <span class="line"></span>
+                                                    <span class='navDropIcon'>
+                                                <i class="fa-solid fa-right-from-bracket"></i>
+                                            </span>
+                                                    <span class="">تسجيل الخروج</span>
+                                                    </span>
+                                                </form>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        @else
+                            <div class="studentInfo">
+                                <div class="studentBtn">
+                                    <button role="button" type="button" class="btn ftu-btn lineParent" data-toggle="dropdown">
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class='studentIcon'>
+                                        <i class="fa-solid fa-graduation-cap"></i>
+
+                                        </span>
+                                                <span class='studentName'>أ\احمد فتحي</span>
+                                    </button>
+                                    <ul class="dropdown-menu navDrop">
+                                        <li>
+                                            <a class="dropdown-item navDropItem lineParent" href="{{route('students.index')}}">
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class='navDropIcon'>
+                                                    <i class="fa-solid fa-house-chimney-user p-1"></i>
+                                                </span>
+                                                    الطلاب
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item navDropItem lineParent" href="{{route('grades.index')}}">
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class='navDropIcon'>
+                                                    <i class="fa-solid fa-user-graduate p-1"></i>
+                                                </span>
+                                                الصفوف
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item navDropItem lineParent" href="{{route('courses.index')}}">
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class='navDropIcon'>
+                                                    <i class="fa-solid fa-photo-film p-1"></i>
+                                                </span>
+                                                الكورسات
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                        <a href="javascript:{}" onclick="window.logoutForm.submit()" class="dropdown-item navDropItem lineParent p-1">
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                            <span class='navDropIcon'>
+                                                    <i class="fa-solid fa-right-from-bracket p-1"></i>
+                                                </span>تسجيل الخروج
+                                            <form id="logoutForm" action="{{ route('logout') }}" class="regItem lineParent" method="POST">
+                                                @csrf
+                                            </form>
+                                        </a>
+                                    </li>
+                                    </ul>
+                                </div>
+                                <div class="mobDetails">
+                                    <div class="studentImage">
+                                        <a href="https://alfawakhry-math.com/profile">
+                                            <img width='100' height='100' src="https://alfawakhry-math.com/imgs/user.webp"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                    <h3 class='studentNameMob'>أ\احمد فتحي</h3>
+                                    <form class="search mobSearch" action="https://alfawakhry-math.com/search">
+                                        <input title="search" placeholder="ابحث هنا"
+                                               type="search" name="q" value="">
+                                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                                    </form>
+                                    <ul class=" navDrop">
+                                        <li>
+                                            <a class="dropdown-item navDropItem lineParent"
+                                               href="{{route('students.index')}}">
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class='navDropIcon'>
+                                                    <i class="fa-solid fa-house-chimney-user"></i>
+                                                </span>
+                                               الطلاب
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item navDropItem lineParent"
+                                               href="{{route('grades.index')}}">
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class='navDropIcon'>
+                                                    <i class="fa-solid fa-graduation-cap"></i>
+                                                </span>
+                                                الصفوف
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item navDropItem lineParent"
+                                               href="{{route('courses.index')}}">
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class='navDropIcon'>
+                                                    <i class="fa-solid fa-graduation-cap"></i>
+                                                </span>
+                                                الكورسات
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:{}" onclick="window.logoutFormM.submit()" class="dropdown-item navDropItem lineParent p-1">
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class='navDropIcon'>
+                                                    <i class="fa-solid fa-right-from-bracket p-1"></i>
+                                                </span>تسجيل الخروج
+                                                <form id="logoutFormM" action="{{ route('logout') }}" class="regItem lineParent" method="POST">
+                                                    @csrf
+                                                </form>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         @endif
-                        <form action="{{ route('logout') }}" class="regItem lineParent" method="POST">
-                            @csrf
-                            {{-- <span class="regIcon">
-                                <img width='100' height='100' src="imgs/signupBtn.svg" alt="signup">
-                            </span> --}}
-                            <button type="submit" class="regType">
-                                تسجيل الخروج
-                            </button>
-                        </form>
                     @endauth
                 </div>
 

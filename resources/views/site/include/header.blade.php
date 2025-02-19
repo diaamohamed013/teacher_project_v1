@@ -228,24 +228,6 @@
 
                 </div>
             </div>
-
-
         </div>
-        <h4 class="d-flex justify-content-center py-5 align-items-center">
-            <a href="{{ route('grades.index') }}" class="btn btn-info" style="font-size: 16px;">
-                View All Grades
-            </a>
-        </h4>
-        <h4 class="d-flex justify-content-center py-5 align-items-center">
-            <a href="{{ route('courses.index') }}" class="btn btn-info" style="font-size: 16px;">
-                View All Courses
-            </a>
-        </h4>
-
-        <h4 class="d-flex justify-content-center py-5 align-items-center">
-            <a href="{{ route('students.index') }}" class="btn btn-info" style="font-size: 16px;">
-                View All Students
-            </a>
-        </h4>
     </div>
 </header>
