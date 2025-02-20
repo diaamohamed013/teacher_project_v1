@@ -11,7 +11,7 @@
                     <img width='100' height='100' src="{{ asset('imgs/logo.webp') }}" alt="logo">
 
                     <h2 class="brandTitle">
-                        ذاكر لي <span>رياضيات</span>
+                        ماستر <span>الرياضيات</span>
                     </h2>
 
                 </div>
@@ -47,10 +47,10 @@
                 <span class='bottomLine'></span>
             </button>
             <div class="left ">
-                <form class="search mainSearch" action="https://alfawakhry-math.com/search">
-                    <input title="search" placeholder="ابحث هنا" type="search" name="q" value="">
-                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
-                </form>
+{{--                <form class="search mainSearch" action="https://alfawakhry-math.com/search">--}}
+{{--                    <input title="search" placeholder="ابحث هنا" type="search" name="q" value="">--}}
+{{--                    <span><i class="fa-solid fa-magnifying-glass"></i></span>--}}
+{{--                </form>--}}
 
                 <div class="register">
                     @guest
@@ -321,11 +321,11 @@
                                         </a>
                                     </div>
                                     <h3 class='studentNameMob'>أ\احمد فتحي</h3>
-                                    <form class="search mobSearch" action="https://alfawakhry-math.com/search">
-                                        <input title="search" placeholder="ابحث هنا"
-                                               type="search" name="q" value="">
-                                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
-                                    </form>
+{{--                                    <form class="search mobSearch" action="https://alfawakhry-math.com/search">--}}
+{{--                                        <input title="search" placeholder="ابحث هنا"--}}
+{{--                                               type="search" name="q" value="">--}}
+{{--                                        <span><i class="fa-solid fa-magnifying-glass"></i></span>--}}
+{{--                                    </form>--}}
                                     <ul class=" navDrop">
                                         <li>
                                             <a class="dropdown-item navDropItem lineParent"

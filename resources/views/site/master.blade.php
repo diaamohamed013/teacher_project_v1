@@ -32,10 +32,7 @@
     <div class="mainNav">
         @include('site.include.nav.guest')
     </div>
-    {{--    <div id="fawaterkDivId"></div> --}}
-    @guest
-        @include('site.include.header')
-    @endguest
+
 
     @yield('content')
 

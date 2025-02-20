@@ -1,6 +1,7 @@
 @extends('site.master')
 
 @section('content')
+    @include('site.include.header')
     <section class="testimonials">
         <div class="container">
             <div class="testimonialsParent">

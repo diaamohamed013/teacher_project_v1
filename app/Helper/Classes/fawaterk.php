@@ -83,11 +83,15 @@ class fawaterk
             ),
         ));
         $response = curl_exec($this->curl);
-        dd($response);
-        $url = json_decode($response, true)['data']['url'];
+        if (array_key_exists('data', $response))
+        {
+            $url = json_decode($response, true)['data']['url'];
+            $this->close();
+            $this->createPaymentRecord($response);
+            return redirect($url);
+        }
         $this->close();
-        $this->createPaymentRecord($response);
-        return redirect($url);
+        throw new \Exception($response);
     }
 
     protected function close()
