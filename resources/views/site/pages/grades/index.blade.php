@@ -4,6 +4,7 @@
 
 
 @section('content')
+    <x-header title="الصفوف الدراسية"></x-header>
     <div class="content-wrapper">
 
         <!-- Main content -->

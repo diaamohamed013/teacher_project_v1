@@ -25,7 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if(auth()->user()->is_teacher){
+        if(auth()->user()?->is_teacher)
+        {
             $students = Student::all();
             return view('site.pages.students.show',compact('students'));
         }

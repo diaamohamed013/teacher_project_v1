@@ -3,7 +3,6 @@
               flex-direction: column;
              align-items: center;'>
         <div class="">
-
             <ul class="heroIconsParent">
                 <li class="icon-content">
                     <a target="_blank" href="https://www.facebook.com/profile.php?id=61556348423567&amp;mibextid=ZbWKwL"
@@ -44,16 +43,18 @@
         </div>
         <div class="copyRight">
             <div class='crParent'>
-                <p class='crTeacher'>جميع حقوق المحتوى محفوظة لأستاذ أحمد الفواخري 2024</p>
+                <p class='crTeacher'>جميع حقوق المحتوى محفوظة لأستاذ أحمد فتحي ©
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>
+                </p>
                 <span class='space'>|</span>
                 <p style='direction:ltr'>
-                    Made with
-                    <span class='heart'><i class="fa-solid fa-heart"></i></span>
-                    By
-                    <a href="https://www.facebook.com/Zircon-EG-101399962387593">Zircon Tech</a>
+                    Made By
+                    <a href="https://github.com/diaamohamed013">Eng\Diaa mohamed</a> &nbsp; & &nbsp;
+                    <a href="https://github.com/AhmedTwabElwahab">Eng\Ahmed Tawab</a>
                 </p>
             </div>
         </div>
     </div>
-
 </footer>
