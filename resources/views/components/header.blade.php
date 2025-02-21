@@ -1,5 +1,5 @@
 @props(['title'])
-<section class="header">
+<section class="header teacherHeader">
     <h2 class='pageName'> {{$title}}</h2>
 </section>
 

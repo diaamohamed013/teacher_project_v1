@@ -151,24 +151,30 @@ header {
     background-size: cover;
     margin-bottom: 10%;
 }
+
 .dark header {
     background: url(../imgs/dark_bg_pages.webp) no-repeat;
 }
+
 header .row {
     align-items: center;
     margin: 0 auto;
 }
+
 .mobileHeroImg {
     display: none;
     max-width: 40rem;
 }
+
 .mobileHeroImg .heroToolip {
     top: 12%;
     right: 10%;
 }
+
 .heroImg {
     position: relative;
 }
+
 .heroImg::after {
     content: "";
     position: absolute;
@@ -179,6 +185,7 @@ header .row {
     border: 1px dashed var(--font-light);
     border-radius: 100rem;
 }
+
 .firstHeroCircle {
     position: absolute;
     top: -7%;
@@ -188,6 +195,7 @@ header .row {
     background: #1b95dc;
     border-radius: 50%;
 }
+
 .firstHeroCircle::after {
     content: "";
     position: absolute;
@@ -198,6 +206,7 @@ header .row {
     border: 1px solid var(--font-dark);
     border-radius: 50%;
 }
+
 .secondHeroCircle {
     position: absolute;
     bottom: -7%;
@@ -207,6 +216,7 @@ header .row {
     background: #ec7763;
     border-radius: 50%;
 }
+
 .secondHeroCircle::after {
     content: "";
     position: absolute;
@@ -217,6 +227,7 @@ header .row {
     border: 2px solid var(--font-dark);
     border-radius: 50%;
 }
+
 .teacherContent {
     /* overflow: hidden; */
     display: flex;
@@ -227,10 +238,12 @@ header .row {
     height: 100%;
     gap: 4rem;
 }
+
 html[lang="en"] .teacherContent {
     direction: ltr;
     /* text-align: start; */
 }
+
 .teacher {
     width: 100%;
     display: flex;
@@ -241,14 +254,17 @@ html[lang="en"] .teacherContent {
 .teacherSub {
     width: 18rem;
 }
+
 html[lang="ar"] .teacherSub {
     margin: 0 auto;
 }
+
 .sub {
     background: url(../imgs/headingSub.html) no-repeat;
     background-position: center;
     background-size: contain;
 }
+
 .teacherBrnad h1 {
     font-size: 9rem;
     color: var(--font-dark);
@@ -256,6 +272,7 @@ html[lang="ar"] .teacherSub {
     font-family: "hala";
     line-height: 1.9;
 }
+
 .teacherBrnad h1 .subTitle {
     position: relative;
     margin-right: 0.5rem;
@@ -270,6 +287,7 @@ html[lang="ar"] .teacherSub {
     position: relative;
     z-index: 99;
 }
+
 .teacherBrnad h1 .subTitle img {
     position: absolute;
     left: 50%;
@@ -285,6 +303,7 @@ html[lang="ar"] .teacherSub {
     color: var(--font-light);
     text-align: right;
 }
+
 .teacher p span {
     color: #f89e4b;
     font-family: hala;
@@ -295,12 +314,14 @@ html[lang="ar"] .teacherSub {
     display: block;
     font-size: 4.2rem;
 }
+
 .heroActions {
     margin-top: 4rem;
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
 }
+
 .infoBtn {
     border: 2px dashed #ea7438;
     color: #ea7438;
@@ -313,11 +334,13 @@ html[lang="ar"] .teacherSub {
     border-radius: 10rem;
     transition: 0.3s all ease;
 }
+
 .infoBtn:hover {
     background: #ea7438;
     display: flex;
     color: #fff;
 }
+
 .heroDetails {
     display: flex;
     align-items: center;
@@ -328,16 +351,19 @@ html[lang="ar"] .teacherSub {
     top: 12rem;
     justify-content: space-between;
 }
+
 .heroDetailsItem {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     color: var(--font-dark);
 }
+
 .heroDetailsItem p {
     font-size: 2rem;
     font-weight: 700;
 }
+
 .headerIcons .facebook {
     color: #74b9ff;
 }
@@ -350,10 +376,12 @@ html[lang="ar"] .teacherSub {
     display: flex;
     gap: 3rem;
 }
+
 .container {
     max-width: 1620px;
     padding: 0 2rem;
 }
+
 .continue-application {
     --color: #fff;
     --background: #4f58e0;
@@ -388,7 +416,7 @@ html[lang="ar"] .teacherSub {
     font-family: hala;
 }
 
-.continue-application > div {
+.continue-application>div {
     top: 0;
     right: 0;
     bottom: 0;
@@ -399,7 +427,7 @@ html[lang="ar"] .teacherSub {
     background: var(--background-left);
 }
 
-.continue-application > div .folder {
+.continue-application>div .folder {
     width: 23px;
     height: 27px;
     position: absolute;
@@ -407,7 +435,7 @@ html[lang="ar"] .teacherSub {
     top: 13px;
 }
 
-.continue-application > div .folder .top {
+.continue-application>div .folder .top {
     left: 0;
     top: 0;
     z-index: 2;
@@ -416,7 +444,7 @@ html[lang="ar"] .teacherSub {
     transition: transform 0.4s ease var(--fd, 0.3s);
 }
 
-.continue-application > div .folder .top svg {
+.continue-application>div .folder .top svg {
     width: 24px;
     height: 27px;
     display: block;
@@ -426,9 +454,9 @@ html[lang="ar"] .teacherSub {
     transform: perspective(120px) rotateY(var(--fr, 0deg));
 }
 
-.continue-application > div .folder:before,
-.continue-application > div .folder:after,
-.continue-application > div .folder .paper {
+.continue-application>div .folder:before,
+.continue-application>div .folder:after,
+.continue-application>div .folder .paper {
     content: "";
     position: absolute;
     left: var(--l, 0);
@@ -439,15 +467,15 @@ html[lang="ar"] .teacherSub {
     background: var(--b, var(--folder-inner));
 }
 
-.continue-application > div .folder:before {
+.continue-application>div .folder:before {
     box-shadow: 0 1.5px 3px var(--shadow), 0 2.5px 5px var(--shadow),
         0 3.5px 7px var(--shadow);
     transform: translateX(var(--fx, 0));
     transition: transform 0.4s ease var(--fd, 0.3s);
 }
 
-.continue-application > div .folder:after,
-.continue-application > div .folder .paper {
+.continue-application>div .folder:after,
+.continue-application>div .folder .paper {
     --l: 1px;
     --t: 1px;
     --w: 21px;
@@ -455,18 +483,18 @@ html[lang="ar"] .teacherSub {
     --b: var(--paper-behind);
 }
 
-.continue-application > div .folder:after {
+.continue-application>div .folder:after {
     transform: translate(var(--pbx, 0), var(--pby, 0));
     transition: transform 0.4s ease var(--pbd, 0s);
 }
 
-.continue-application > div .folder .paper {
+.continue-application>div .folder .paper {
     z-index: 1;
     --b: var(--paper);
 }
 
-.continue-application > div .folder .paper:before,
-.continue-application > div .folder .paper:after {
+.continue-application>div .folder .paper:before,
+.continue-application>div .folder .paper:after {
     content: "";
     width: var(--wp, 14px);
     height: 2px;
@@ -479,12 +507,12 @@ html[lang="ar"] .teacherSub {
     box-shadow: 0 12px 0 0 var(--paper-lines), 0 24px 0 0 var(--paper-lines);
 }
 
-.continue-application > div .folder .paper:after {
+.continue-application>div .folder .paper:after {
     --tp: 6px;
     --wp: 10px;
 }
 
-.continue-application > div .pencil {
+.continue-application>div .pencil {
     height: 2px;
     width: 3px;
     border-radius: 1px 1px 0 0;
@@ -498,20 +526,16 @@ html[lang="ar"] .teacherSub {
     transition: transform 0.4s ease var(--pbd, 0s);
 }
 
-.continue-application > div .pencil:before,
-.continue-application > div .pencil:after {
+.continue-application>div .pencil:before,
+.continue-application>div .pencil:after {
     content: "";
     position: absolute;
     display: block;
-    background: var(
-        --b,
-        linear-gradient(
-            var(--pencil-top) 55%,
-            var(--pencil-middle) 55.1%,
-            var(--pencil-middle) 60%,
-            var(--pencil-bottom) 60.1%
-        )
-    );
+    background: var(--b,
+            linear-gradient(var(--pencil-top) 55%,
+                var(--pencil-middle) 55.1%,
+                var(--pencil-middle) 60%,
+                var(--pencil-bottom) 60.1%));
     width: var(--w, 5px);
     height: var(--h, 20px);
     border-radius: var(--br, 2px 2px 0 0);
@@ -519,12 +543,12 @@ html[lang="ar"] .teacherSub {
     left: var(--l, -1px);
 }
 
-.continue-application > div .pencil:before {
+.continue-application>div .pencil:before {
     -webkit-clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px);
     clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px);
 }
 
-.continue-application > div .pencil:after {
+.continue-application>div .pencil:after {
     --b: none;
     --w: 3px;
     --h: 6px;
@@ -554,14 +578,17 @@ html[lang="ar"] .teacherSub {
     position: relative;
     top: 3rem;
 }
+
 .firstBoxParent {
     position: relative;
     top: 12rem;
 }
+
 .headerLeftSide svg {
     display: block;
     margin: auto;
 }
+
 .secondBoxParent,
 .firstBoxParent {
     display: flex;
@@ -570,20 +597,25 @@ html[lang="ar"] .teacherSub {
     gap: 3rem;
     flex-direction: column;
 }
+
 .firstBoxParent .heroImg {
     z-index: 9;
 }
+
 .block1,
 .block2 {
     stroke-miterlimit: 0;
     stroke-width: 1px;
 }
+
 .firstBoxs .block2 {
     display: none;
 }
+
 .secondBoxs .block1 {
     display: none;
 }
+
 .block1 {
     stroke: hsl(var(--colorMain), 50%, 30%);
 }
@@ -628,25 +660,30 @@ html[lang="ar"] .teacherSub {
     font-weight: 700;
     font-size: 1.8rem;
 }
+
 .heroToolip svg {
     position: absolute;
     z-index: -1;
     width: 140%;
 }
+
 .heroToolip svg path {
     fill: var(--font-dark);
     stroke: var(--font-dark);
     transition: 0.3s all ease;
 }
+
 .secondBoxParent .heroToolip {
     top: 15%;
     left: 80%;
 }
+
 .firstBoxParent .heroToolip {
     top: 15%;
     left: -30%;
     line-height: 3;
 }
+
 /******************
 ***** testimonials **********
 ************/
@@ -664,6 +701,7 @@ html[lang="ar"] .teacherSub {
     gap: 4rem;
     position: relative;
 }
+
 .realSwiper {
     position: relative;
     overflow: hidden;
@@ -671,6 +709,7 @@ html[lang="ar"] .teacherSub {
     margin-left: 3rem;
     padding-right: 3rem;
 }
+
 .testimonial {
     border: 2px dashed var(--font-light);
     display: flex;
@@ -681,6 +720,7 @@ html[lang="ar"] .teacherSub {
     height: 100%;
     justify-content: space-between;
 }
+
 .testimonial::after {
     content: "";
     position: absolute;
@@ -690,6 +730,7 @@ html[lang="ar"] .teacherSub {
     width: 1.5rem;
     aspect-ratio: 1/1;
 }
+
 .rightNumber {
     position: absolute;
     top: 50%;
@@ -697,27 +738,32 @@ html[lang="ar"] .teacherSub {
     transform: translate(75%, -50%);
     z-index: 1;
 }
+
 .bottomDegree {
     position: absolute;
     bottom: -0.5rem;
     left: -0.5rem;
     z-index: 1;
 }
+
 .testimonial p {
     color: var(--font-light);
     max-height: 10rem;
     overflow: auto;
     font-size: 1.6rem;
 }
+
 .testimonial p::-webkit-scrollbar {
     display: none;
 }
+
 .studentNameTestimonial {
     margin-top: 2rem;
     display: flex;
     align-items: center;
     gap: 1rem;
 }
+
 .studentNameTestimonial h3 {
     font-size: 2.4rem;
     font-weight: 700;
@@ -727,11 +773,13 @@ html[lang="ar"] .teacherSub {
     white-space: nowrap;
     max-width: 100%;
 }
+
 .studentNameTestimonial span {
     font-size: 2.4rem;
     font-weight: 700;
     color: #36b2e8;
 }
+
 .userImg {
     width: 5rem;
     height: 5rem;
@@ -746,15 +794,18 @@ html[lang="ar"] .teacherSub {
     border-radius: 1rem;
     height: 100%;
 }
+
 .quote {
     width: 5rem;
     position: absolute;
 }
+
 .topQuote {
     top: 0;
     left: 0;
     transform: translate(50%, -40%);
 }
+
 .bottomQuote {
     bottom: 0;
     right: 0;
@@ -767,9 +818,11 @@ html[lang="ar"] .teacherSub {
 .semesters {
     padding: 7rem 0;
 }
+
 .semesters .subjectSectionTitle span {
     position: relative;
 }
+
 .semesters .subjectSectionTitle span::after {
     content: "";
     position: absolute;
@@ -782,9 +835,11 @@ html[lang="ar"] .teacherSub {
     z-index: -2;
     opacity: 0.5;
 }
+
 .semesters .row {
     justify-content: center;
 }
+
 .semester {
     display: flex;
     align-items: center;
@@ -807,6 +862,7 @@ html[lang="ar"] .teacherSub {
     overflow: hidden;
     font-family: hala;
 }
+
 .semester:hover {
     transform: translateY(-10px);
 }
@@ -843,10 +899,12 @@ html[lang="ar"] .teacherSub {
     justify-content: center;
     align-items: center;
 }
+
 .semesterImg img {
     width: 9rem;
     height: 9rem;
 }
+
 .semesterImg::before {
     content: "";
     position: absolute;
@@ -872,6 +930,7 @@ html[lang="ar"] .teacherSub {
     transition: 0.3s all ease;
     z-index: 2;
 }
+
 .semesters .overlay {
     content: "";
     position: absolute;
@@ -893,54 +952,71 @@ html[lang="ar"] .teacherSub {
 .semester:hover .circle {
     background: #ffeeba;
 }
+
 .semester:hover .semesterImg::before {
     border-color: #ffeeba;
 }
+
 .semesterName span {
     color: #ffc838;
 }
+
 .semester:hover .semesterName span {
     color: var(--font-dark);
 }
+
 .sem2 .semesterName span {
     color: #4cc2f5;
 }
+
 .sem2 .semesterImg {
     background: #4cc2f5;
 }
+
 .sem2 .semesterImg::before {
     border-color: #4cc2f5;
 }
+
 .sem2 .circle {
     background: #4cc2f5;
 }
+
 .sem2 .overlay {
     background: #4cc2f5;
 }
+
 .sem2:hover .circle {
     background: #b3e6f4;
 }
+
 .sem2:hover .semesterImg::before {
     border-color: #b3e6f4;
 }
+
 .sem3 .semesterName span {
     color: #8cd2e5;
 }
+
 .sem3 .semesterImg {
     background: #8cd2e5;
 }
+
 .sem3 .semesterImg::before {
     border-color: #8cd2e5;
 }
+
 .sem3 .circle {
     background: #8cd2e5;
 }
+
 .sem3 .overlay {
     background: #8cd2e5;
 }
+
 .sem3:hover .circle {
     background: #b3e6f4;
 }
+
 .sem3:hover .semesterImg::before {
     border-color: #b3e6f4;
 }
@@ -948,42 +1024,55 @@ html[lang="ar"] .teacherSub {
 .sem4 .semesterName span {
     color: #fe3d97;
 }
+
 .sem4 .semesterImg {
     background: #fe3d97;
 }
+
 .sem4 .semesterImg::before {
     border-color: #fe3d97;
 }
+
 .sem4 .circle {
     background: #fe3d97;
 }
+
 .sem4 .overlay {
     background: #fe3d97;
 }
+
 .sem4:hover .circle {
     background: #ff7eba;
 }
+
 .sem4:hover .semesterImg::before {
     border-color: #ff7eba;
 }
+
 .sem5 .semesterName span {
     color: #7b5a86;
 }
+
 .sem5 .semesterImg {
     background: #7b5a86;
 }
+
 .sem5 .semesterImg::before {
     border-color: #7b5a86;
 }
+
 .sem5 .circle {
     background: #7b5a86;
 }
+
 .sem5 .overlay {
     background: #7b5a86;
 }
+
 .sem5:hover .circle {
     background: #bc9ac9;
 }
+
 .sem5:hover .semesterImg::before {
     border-color: #bc9ac9;
 }
@@ -992,10 +1081,12 @@ html[lang="ar"] .teacherSub {
     /* font-size: 4.2rem; */
     font-weight: bold;
 }
+
 .semester span:last-of-type {
     /* font-size: 2.6rem; */
     font-weight: bold;
 }
+
 .semesterName {
     font-size: 2.4rem;
     font-weight: 700;
@@ -1022,9 +1113,11 @@ html[lang="ar"] .teacherSub {
     transition: 0.3s all ease;
     border-radius: 1.6rem;
 }
+
 .dark .subjects {
     background: var(--second-bg);
 }
+
 .subjectsSectionHeader {
     display: flex;
     justify-content: center;
@@ -1034,14 +1127,17 @@ html[lang="ar"] .teacherSub {
     flex-direction: column;
     text-align: center;
 }
+
 .subjectSectionTitle {
     font-size: 4.2rem;
     font-family: hala;
 }
+
 .subjectsSectionHeader p {
     font-size: 2.4rem;
     color: var(--font-light);
 }
+
 .subject {
     padding: 3rem 2rem;
     border-radius: 1.2rem;
@@ -1050,25 +1146,31 @@ html[lang="ar"] .teacherSub {
     margin: 0 auto;
     display: block;
 }
+
 .subject:hover {
     display: block;
 }
+
 .subject:hover {
     background: var(--main-bg);
 }
+
 .subjectImg {
     width: 15rem;
 }
+
 .subjectTitle {
     font-size: 3.8rem;
 
     font-weight: 900;
 }
+
 .subjectText {
     font-size: 2rem;
     color: var(--font-light);
     margin: 1.5rem 0;
 }
+
 .subjectBtn {
     position: relative;
     background: transparent;
@@ -1080,6 +1182,7 @@ html[lang="ar"] .teacherSub {
     gap: 1rem;
     color: var(--font-dark);
 }
+
 .subjectBtn::before {
     content: "";
     position: absolute;
@@ -1093,10 +1196,12 @@ html[lang="ar"] .teacherSub {
     border-radius: 50%;
     transition: 0.3s all ease;
 }
+
 .subjectBtn span {
     display: flex;
     margin-top: 0.4rem;
 }
+
 /************************************
 *********** latest lectures**********
 *************************************/
@@ -1105,6 +1210,7 @@ html[lang="ar"] .teacherSub {
     padding: 10rem 0 10rem;
     position: relative;
 }
+
 .homeTitle .title {
     font-size: 4rem;
     display: flex;
@@ -1114,12 +1220,14 @@ html[lang="ar"] .teacherSub {
     font-family: hala;
     margin-bottom: 5rem;
 }
+
 .homeTitle .title span {
     font-size: 1.5em;
     position: relative;
     width: fit-content;
     z-index: 1;
 }
+
 .homeTitle .title span::after {
     content: "";
     position: absolute;
@@ -1132,6 +1240,7 @@ html[lang="ar"] .teacherSub {
     z-index: -2;
     opacity: 0.5;
 }
+
 .latestLectureTitle {
     display: flex;
     align-items: center;
@@ -1140,6 +1249,7 @@ html[lang="ar"] .teacherSub {
     flex-wrap: wrap;
     margin-bottom: 5rem;
 }
+
 .allLecturesBtn {
     background: transparent;
     padding: 1.5rem 2.5rem;
@@ -1153,6 +1263,7 @@ html[lang="ar"] .teacherSub {
     align-items: center;
     gap: 0.5rem;
 }
+
 .allLecturesBtn:hover {
     color: #fff;
     background: var(--main-color);
@@ -1164,12 +1275,14 @@ html[lang="ar"] .teacherSub {
     position: relative;
     width: fit-content;
 }
+
 .lectureTitle span:last-child {
     font-size: 5.2rem;
     font-weight: 700;
     position: relative;
     width: fit-content;
 }
+
 .lectureTitle span:last-child:after {
     content: "";
     position: absolute;
@@ -1180,6 +1293,7 @@ html[lang="ar"] .teacherSub {
     background: rgba(54, 178, 232, 0.2);
     z-index: -1;
 }
+
 .cardsRow {
     justify-content: center;
 }
@@ -1193,6 +1307,7 @@ html[lang="ar"] .teacherSub {
     overflow: visible !important;
     position: relative;
 }
+
 .testimonialsBtns {
     display: flex;
     flex-direction: row-reverse;
@@ -1202,6 +1317,7 @@ html[lang="ar"] .teacherSub {
     gap: 2rem;
     margin-left: 5%;
 }
+
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after,
 .swiper-button-prev:after,
@@ -1225,4 +1341,152 @@ html[lang="ar"] .teacherSub {
 .swiper-button-disabled {
     /* opacity: 0.5 !important; */
     color: #17171d;
+}
+
+.tooltipIcon {
+    position: relative;
+    font-size: 16px;
+}
+
+.tooltipIcon .tooltiptext {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    opacity: 0;
+    white-space: nowrap;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transform: translate(-50%, -20%);
+    -webkit-transform: translate(-50%, -20%);
+    -moz-transform: translate(-50%, -20%);
+    -ms-transform: translate(-50%, -20%);
+    -o-transform: translate(-50%, -20%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.tooltipIcon:hover .tooltiptext {
+    opacity: 1;
+    visibility: visible;
+}
+
+.saveBtn, .form-control {
+    font-size: 16px;
+}
+
+.tableNoWrap thead th {
+    white-space: nowrap;
+    text-align: center;
+}
+
+.table-responsive {
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 1400px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
+
+.cardRound {
+    border-radius: 10px;
+}
+
+/* Dashboard Style */
+.dashTeacher .card, .card-light {
+    border-radius: 10px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, .1);
+    -moz-box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, .1);
+    box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, .1);
+    border: 0
+}
+
+.dashTeacher .card-round {
+    border-radius: 10px
+}
+
+.dashTeacher .card-stats .card-body {
+    padding: 15px !important;
+}
+
+.dashTeacher .card-stats .col-icon {
+    width: 65px;
+    height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 15px;
+}
+
+.dashTeacher .card-stats .icon-big {
+    color: #fff;
+    font-size: 3rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.dashTeacher .card-stats .col-stats {
+    align-items: center;
+    display: flex;
+    padding-left: 15px;
+}
+
+.dashTeacher .card-category {
+    margin-top: 0px;
+    font-size: 1.5rem;
+    color: #8d9498;
+    margin-bottom: 0;
+    word-break: normal;
+}
+
+.dashTeacher .card-title {
+    margin: 0;
+    color: #2a2f5b;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.dashTeacher .card-stats .icon-big.icon-primary {
+    background: #1572e8;
+}
+
+.dashTeacher .card-stats .icon-big.icon-info {
+    background: #48abf7;
+}
+
+.dashTeacher .card-stats .icon-big.icon-success {
+    background: #31ce36;
+}
+
+.dashTeacher .table>tbody>tr>td, .dashTeacher .table>tbody>tr>th, .dashTeacher thead.thead-light th {
+    padding: 16px 24px !important;
+}
+
+.dashTeacher .btn-icon.btn-sm {
+    height: 2rem;
+    min-width: 2rem;
+    width: 2rem;
+}
+
+.dark .dashTeacher {
+    background: url(../imgs/dark_bg_pages.webp) no-repeat !important;
+    background-size: cover;
 }
