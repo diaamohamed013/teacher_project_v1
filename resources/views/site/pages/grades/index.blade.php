@@ -1,14 +1,19 @@
 @extends('site.master')
 
 @section('title', 'Grades')
-
-
+@section('css')
+    <style>
+        .teacherHeader {
+            padding: 15rem 2rem;
+        }
+    </style>
+@endsection
 @section('content')
     <x-header title="الصفوف الدراسية"></x-header>
     <div class="content-wrapper">
 
         <!-- Main content -->
-        <section class="content">
+        <section class="content px-0">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -17,52 +22,51 @@
                             <div class="alert alert-success">{{ session('status') }}</div>
                         @endif
 
-                        <div class="card mt-3">
-                            <div class="card-header">
-                                <h4 class="d-flex justify-content-between align-items-center" style="font-size: 22px;">
+                        <div class="card mt-3 cardRound">
+                            <div class="card-body">
+                                <h4 class="d-flex justify-content-between align-items-center mb-3" style="font-size: 22px;">
                                     Grades
-                                    <a href="{{ route('grades.create') }}" class="btn btn-primary py-3" style="font-size: 16px;">
+                                    <a href="{{ route('grades.create') }}" class="btn btn-primary py-3"
+                                        style="font-size: 16px;">
                                         Add New Grade
                                     </a>
                                 </h4>
-                            </div>
-                            <div class="card-body">
-
-                                <table class="table table-bordered table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th>Id</th>
-                                            <th>Name</th>
-                                            <th width="40%">Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($grades as $grade)
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped tableNoWrap">
+                                        <thead>
                                             <tr>
-                                                <td>{{ $loop->iteration }}</td>
-                                                <td>{{ $grade->name }}</td>
-                                                <td>
-                                                    <a href="{{ route('grades.edit', $grade->id) }}"
-                                                        class="btn text-success">
-                                                        <i class="fa fa-edit"></i>
-                                                    </a>
-                                                    <!-- <a href=""
-                                                                class="btn btn-danger mx-2">Delete</a> -->
-                                                    <form action="{{ route('grades.destroy', $grade->id) }}"
-                                                        method="POST" class="d-inline">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit" class="btn text-danger">
-                                                            <i class="fa fa-trash"></i>
-                                                        </button>
-                                                    </form>
-
-                                                </td>
+                                                <th>Id</th>
+                                                <th>Name</th>
+                                                <th width="40%">Action</th>
                                             </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
-
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($grades as $grade)
+                                                <tr>
+                                                    <td>{{ $loop->iteration }}</td>
+                                                    <td>{{ $grade->name }}</td>
+                                                    <td>
+                                                        <a href="{{ route('grades.edit', $grade->id) }}"
+                                                            class="btn text-success tooltipIcon">
+                                                            <i class="fa fa-edit"></i>
+                                                            <span class="tooltiptext">Edit</span>
+                                                        </a>
+                                                        <form action="{{ route('grades.destroy', $grade->id) }}" method="POST"
+                                                            class="d-inline">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit" class="btn text-danger tooltipIcon shadow-none"
+                                                                onclick="return confirm('Are you sure?')">
+                                                                <i class="fa fa-trash"></i>
+                                                                <span class="tooltiptext">Delete</span>
+                                                            </button>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>

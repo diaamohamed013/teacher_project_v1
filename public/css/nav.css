@@ -1274,7 +1274,7 @@ footer {
     background-position: top;
     direction: rtl;
     transition: 0.3s all ease;
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
 }
 .dark footer {
     background: url(../imgs/dark_bg_pages.webp) no-repeat;

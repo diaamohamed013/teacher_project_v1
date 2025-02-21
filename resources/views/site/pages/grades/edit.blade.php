@@ -1,14 +1,20 @@
 @extends('site.master')
 
 @section('title', 'Grades')
-
+@section('css')
+    <style>
+        .teacherHeader {
+            padding: 15rem 2rem;
+        }
+    </style>
+@endsection
 @section('content')
     <x-header title="تعديل الصف الدراسي"></x-header>
 
     <div class="content-wrapper">
 
         <!-- Main content -->
-        <section class="content">
+        <section class="content px-0">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -39,7 +45,7 @@
                                         <input type="text" name="name" class="form-control" value="{{ $grade->name }}" />
                                     </div>
                                     <div class="mb-3">
-                                        <button type="submit" class="btn btn-primary">Update</button>
+                                        <button type="submit" class="btn btn-primary saveBtn">Update</button>
                                     </div>
                                 </form>
                             </div>
