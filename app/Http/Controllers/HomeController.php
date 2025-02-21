@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
 use App\Models\Grade;
+use App\Models\Section;
 use App\Models\Student;
 use Illuminate\Http\Request;
 
@@ -27,8 +29,10 @@ class HomeController extends Controller
     {
         if(auth()->user()?->is_teacher)
         {
-            $students = Student::all();
-            return view('site.pages.students.show',compact('students'));
+            $studentsCount = Student::count();
+            $coursesCount = Course::count();
+            $sectionsCount = Section::count();
+            return view('site.pages.dashboard.index', compact('studentsCount', 'coursesCount', 'sectionsCount'));
         }
         return view('site.pages.home');
     }

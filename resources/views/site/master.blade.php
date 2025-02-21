@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="{{ asset('css/home.css') }}" class="rel">
     <link rel="stylesheet" href="{{ asset('css/home-responsive.css') }}" class="rel">
     <link rel="stylesheet" href="{{ asset('css/nav.css') }}">
+    @yield('css')
 </head>
 
 <body>

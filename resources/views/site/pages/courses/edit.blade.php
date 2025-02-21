@@ -1,14 +1,20 @@
 @extends('site.master')
 
 @section('title', 'Courses')
-
+@section('css')
+    <style>
+        .teacherHeader {
+            padding: 15rem 2rem;
+        }
+    </style>
+@endsection
 @section('content')
     <x-header title="تعديل البيانات الكورس"></x-header>
 
     <div class="content-wrapper">
 
         <!-- Main content -->
-        <section class="content">
+        <section class="content px-0">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">

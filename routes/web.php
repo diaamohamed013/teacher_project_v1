@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GradeController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PaymentController;
@@ -20,4 +21,5 @@ Route::get('/payment/pending', [PaymentController::class, 'pending']);
 Route::resource('/grades', GradeController::class);
 Route::resource('/courses', CourseController::class);
 Route::get('/students', [StudentController::class,'index'])->name('students.index');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
