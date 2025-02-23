@@ -45,6 +45,10 @@
                                         <input type="text" name="name" class="form-control" />
                                     </div>
                                     <div class="mb-3">
+                                        <label for="">symbol </label>
+                                        <input type="text" name="symbol" class="form-control" />
+                                    </div>
+                                    <div class="mb-3">
                                         <button type="submit" class="btn btn-primary saveBtn">Save</button>
                                     </div>
                                 </form>

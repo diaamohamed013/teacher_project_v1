@@ -8,7 +8,7 @@
             <a href="{{ route('home') }}" class="navLogo" name="mainLogo">
                 <div class="logoBrand">
 
-                    <img width='100' height='100' src="{{ asset('imgs/logo.webp') }}" alt="logo">
+{{--                    <img width='100' height='100' src="{{ asset('imgs/logo.webp') }}" alt="logo">--}}
 
                     <h2 class="brandTitle">
                         ماستر <span>الرياضيات</span>

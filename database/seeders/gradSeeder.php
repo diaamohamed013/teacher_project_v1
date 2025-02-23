@@ -15,10 +15,16 @@ class gradSeeder extends Seeder
     {
         DB::table('grades')->insert([
             [
-                'name' => 'الصف الاول الثانوي'
+                'name' => 'الصف الاول الثانوي',
+                'symbol' => '1ث'
             ],
             [
-                'name' => 'الصف الثاني الثانوي'
+                'name' => 'الصف الثاني الثانوي',
+                'symbol' => '2ث'
+            ],
+            [
+                'name' => 'الصف الثالث الثانوي',
+                'symbol' => '3ث'
             ],
         ]);
     }

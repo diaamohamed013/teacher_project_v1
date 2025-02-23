@@ -36,6 +36,7 @@
         },
         "files": [
             "app/Helper/Constant.php",
+            "app/Helper/functions.php",
             "app/Helper/Classes/fawaterk.php"
         ]
     },
