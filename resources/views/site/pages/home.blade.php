@@ -578,7 +578,7 @@
             <div class="row">
                 @foreach($last_courses as $course)
                     <div class="col-xl-4 col-lg-6 col-md-6 myCard" data-sal='slide-up' data-sal-delay='0' data-sal-easing='ease-out-back' data-sal-duration='1800'>
-                        <a class="latestCard grade2" href='../lectures/kors-shhr-9-kaml-tany-thanoy-aalmy.html'>
+                        <a class="latestCard grade2" href='{{route('courses.show',$course->id)}}'>
                             <div class="cardParent">
                                 <div class='contentParent'>
                                     <div class="image">

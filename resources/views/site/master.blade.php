@@ -49,7 +49,6 @@
     <script src="{{ asset('js/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js') }}"></script>
     <script src="{{ asset('js/swiper.bundle.min.js') }}"></script>
     <script src="{{ asset('js/home.js') }}"></script>
-    {{--    <script src="https://app.fawaterk.com/fawaterkPlugin/fawaterkPlugin.min.js"></script> --}}
     <script src="{{ asset('js/home/index.js') }}"></script>
     @stack('course-js')
 </body>

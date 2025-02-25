@@ -59,34 +59,41 @@
                                                         <td>{{ $course->video_url }}</td>
                                                         <td>{{ $course->description }}</td>
                                                         <td>
-                                                            @if ($course->sections->isNotEmpty())
-                                                                <table class="table table-sm table-bordered">
-                                                                    <thead>
-                                                                        <tr>
-                                                                            <th>Section Name</th>
-                                                                            <th>Section Title</th>
-                                                                            <th>Type</th>
-                                                                            <th>URL</th>
-                                                                            <th>Details</th>
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                        @foreach ($course->sections as $section)
-                                                                            @foreach ($section->sectionDetails as $detail)
-                                                                                <tr>
-                                                                                    <td>{{ $section->name }}</td>
-                                                                                    <td>{{ $detail->section_title }}</td>
-                                                                                    <td>{{ $detail->type }}</td>
-                                                                                    <td>{{ $detail->url }}</td>
-                                                                                    <td>{{ $detail->details }}</td>
-                                                                                </tr>
-                                                                            @endforeach
-                                                                        @endforeach
-                                                                    </tbody>
-                                                                </table>
-                                                            @else
-                                                                No sections available
+                                                            @if($course->sections->isEmpty())
+                                                                <a href="{{ route('section.create',['course_id'=> $course->id]) }}"
+                                                                   class="btn text-success tooltipIcon">
+                                                                    <i class="fa fa-plus"></i>
+                                                                    <span class="tooltiptext">add sections</span>
+                                                                </a>
                                                             @endif
+{{--                                                            @if ($course->sections->isNotEmpty())--}}
+{{--                                                                <table class="table table-sm table-bordered">--}}
+{{--                                                                    <thead>--}}
+{{--                                                                        <tr>--}}
+{{--                                                                            <th>Section Name</th>--}}
+{{--                                                                            <th>Section Title</th>--}}
+{{--                                                                            <th>Type</th>--}}
+{{--                                                                            <th>URL</th>--}}
+{{--                                                                            <th>Details</th>--}}
+{{--                                                                        </tr>--}}
+{{--                                                                    </thead>--}}
+{{--                                                                    <tbody>--}}
+{{--                                                                        @foreach ($course->sections as $section)--}}
+{{--                                                                            @foreach ($section->sectionDetails as $detail)--}}
+{{--                                                                                <tr>--}}
+{{--                                                                                    <td>{{ $section->name }}</td>--}}
+{{--                                                                                    <td>{{ $detail->section_title }}</td>--}}
+{{--                                                                                    <td>{{ $detail->type }}</td>--}}
+{{--                                                                                    <td>{{ $detail->url }}</td>--}}
+{{--                                                                                    <td>{{ $detail->details }}</td>--}}
+{{--                                                                                </tr>--}}
+{{--                                                                            @endforeach--}}
+{{--                                                                        @endforeach--}}
+{{--                                                                    </tbody>--}}
+{{--                                                                </table>--}}
+{{--                                                            @else--}}
+{{--                                                                No sections available--}}
+{{--                                                            @endif--}}
                                                         </td>
                                                         <td style="white-space: nowrap;">
                                                             <a href="{{ route('courses.edit', $course->id) }}"

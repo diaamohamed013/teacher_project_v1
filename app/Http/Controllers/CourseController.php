@@ -66,34 +66,34 @@ class CourseController extends Controller
             }
 
             // Handle multiple sections
-            $sections = $request->input('name', []);
-            $section_titles = $request->input('section_title', []);
-            $urls = $request->input('url', []);
-            $types = $request->input('type', []);
-            $details = $request->input('details', []);
-
-            foreach ($sections as $index => $sectionName) {
-                // Create a new section
-                $section = new Section();
-                $section->course_id = $course->id;
-                $section->name = $sectionName;
-
-                if (!$section->save()) {
-                    throw new \Exception('Error creating section.');
-                }
-
-                // Create section details for this section
-                $sectionDetails = new SectionDetails();
-                $sectionDetails->section_id = $section->id;
-                $sectionDetails->section_title = $section_titles[$index] ?? null;
-                $sectionDetails->type = $types[$index] ?? null;
-                $sectionDetails->url = $urls[$index] ?? null;
-                $sectionDetails->details = $details[$index] ?? null;
-
-                if (!$sectionDetails->save()) {
-                    throw new \Exception('Error creating section details.');
-                }
-            }
+//            $sections = $request->input('name', []);
+//            $section_titles = $request->input('section_title', []);
+//            $urls = $request->input('url', []);
+//            $types = $request->input('type', []);
+//            $details = $request->input('details', []);
+//
+//            foreach ($sections as $index => $sectionName) {
+//                // Create a new section
+//                $section = new Section();
+//                $section->course_id = $course->id;
+//                $section->name = $sectionName;
+//
+//                if (!$section->save()) {
+//                    throw new \Exception('Error creating section.');
+//                }
+//
+//                // Create section details for this section
+//                $sectionDetails = new SectionDetails();
+//                $sectionDetails->section_id = $section->id;
+//                $sectionDetails->section_title = $section_titles[$index] ?? null;
+//                $sectionDetails->type = $types[$index] ?? null;
+//                $sectionDetails->url = $urls[$index] ?? null;
+//                $sectionDetails->details = $details[$index] ?? null;
+//
+//                if (!$sectionDetails->save()) {
+//                    throw new \Exception('Error creating section details.');
+//                }
+//            }
 
             DB::commit();
             return redirect()->route('courses.index')->with('success', 'Course created successfully');
@@ -108,9 +108,9 @@ class CourseController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Course $course)
     {
-        //
+        return view('site.pages.courses.show', compact('course'));
     }
 
     /**
