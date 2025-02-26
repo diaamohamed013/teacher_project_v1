@@ -13,7 +13,8 @@ class SectionDetailController extends Controller
     {
         if ($request->has('section_id'))
         {
-            $section = Section::find($request->has('section_id'))->first();
+            $sec_id = $request->input('section_id');
+            $section = Section::where('id',$sec_id)->first();
             if (empty($section))
             {
                 return redirect()->back();

@@ -99,59 +99,59 @@
                                     </div>
 
                                     <!-- Sections -->
-                                    <h5>Sections</h5>
-                                    <div id="sectionContainer">
-                                        @foreach ($course->sections as $section)
-                                            {{-- @dd($section) --}}
-                                            <div class="section-template">
-                                                <div class="mb-3">
-                                                    <label>Section Name</label>
-                                                    <input type="text" name="name[]" value="{{ $section->name }}"
-                                                        class="form-control" />
-                                                    <input type="text" name="sectionId[]" value="{{ $section->id }}"
-                                                        hidden />
-                                                </div>
+{{--                                    <h5>Sections</h5>--}}
+{{--                                    <div id="sectionContainer">--}}
+{{--                                        @foreach ($course->sections as $section)--}}
+{{--                                            --}}{{-- @dd($section) --}}
+{{--                                            <div class="section-template">--}}
+{{--                                                <div class="mb-3">--}}
+{{--                                                    <label>Section Name</label>--}}
+{{--                                                    <input type="text" name="name[]" value="{{ $section->name }}"--}}
+{{--                                                        class="form-control" />--}}
+{{--                                                    <input type="text" name="sectionId[]" value="{{ $section->id }}"--}}
+{{--                                                        hidden />--}}
+{{--                                                </div>--}}
 
-                                                @foreach ($section->sectionDetails as $detail)
-                                                    <div class="mb-3">
-                                                        <label>Section Title</label>
-                                                        <input type="text" name="section_title[]"
-                                                            value="{{ $detail->section_title }}" class="form-control" />
-                                                        <input type="text" name="detailsId[]"
-                                                            value="{{ $detail->id }}" hidden />
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label>URL</label>
-                                                        <input type="url" name="url[]" value="{{ $detail->url }}"
-                                                            class="form-control" />
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label>Type</label>
-                                                        <select name="type[]" class="form-control">
-                                                            <option value="video"
-                                                                {{ $detail->type == 'video' ? 'selected' : '' }}>
-                                                                Video</option>
-                                                            <option value="test"
-                                                                {{ $detail->type == 'test' ? 'selected' : '' }}>
-                                                                Test</option>
-                                                            <option value="pdf"
-                                                                {{ $detail->type == 'pdf' ? 'selected' : '' }}>
-                                                                PDF</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label>Details</label>
-                                                        <textarea name="details[]" class="form-control">{{ $detail->details }}</textarea>
-                                                    </div>
-                                                @endforeach
-                                            </div>
-                                        @endforeach
-                                    </div>
+{{--                                                @foreach ($section->sectionDetails as $detail)--}}
+{{--                                                    <div class="mb-3">--}}
+{{--                                                        <label>Section Title</label>--}}
+{{--                                                        <input type="text" name="section_title[]"--}}
+{{--                                                            value="{{ $detail->section_title }}" class="form-control" />--}}
+{{--                                                        <input type="text" name="detailsId[]"--}}
+{{--                                                            value="{{ $detail->id }}" hidden />--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="mb-3">--}}
+{{--                                                        <label>URL</label>--}}
+{{--                                                        <input type="url" name="url[]" value="{{ $detail->url }}"--}}
+{{--                                                            class="form-control" />--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="mb-3">--}}
+{{--                                                        <label>Type</label>--}}
+{{--                                                        <select name="type[]" class="form-control">--}}
+{{--                                                            <option value="video"--}}
+{{--                                                                {{ $detail->type == 'video' ? 'selected' : '' }}>--}}
+{{--                                                                Video</option>--}}
+{{--                                                            <option value="test"--}}
+{{--                                                                {{ $detail->type == 'test' ? 'selected' : '' }}>--}}
+{{--                                                                Test</option>--}}
+{{--                                                            <option value="pdf"--}}
+{{--                                                                {{ $detail->type == 'pdf' ? 'selected' : '' }}>--}}
+{{--                                                                PDF</option>--}}
+{{--                                                        </select>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="mb-3">--}}
+{{--                                                        <label>Details</label>--}}
+{{--                                                        <textarea name="details[]" class="form-control">{{ $detail->details }}</textarea>--}}
+{{--                                                    </div>--}}
+{{--                                                @endforeach--}}
+{{--                                            </div>--}}
+{{--                                        @endforeach--}}
+{{--                                    </div>--}}
 
 
 
                                     <!-- Add Section Button -->
-                                    <button type="button" class="btn btn-warning" id="addSection">Add Section</button>
+{{--                                    <button type="button" class="btn btn-warning" id="addSection">Add Section</button>--}}
 
                                     <!-- Submit Button -->
                                     <div class="mb-3">

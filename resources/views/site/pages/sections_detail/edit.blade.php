@@ -60,9 +60,7 @@
                                     <div class="col-md-12">
                                         <div class="mb-3">
                                             <label for="">Details</label>
-                                            <textarea name="details" class="form-control" placeholder="Enter section details">
-                                                {{$detail->details}}
-                                            </textarea>
+                                            <textarea name="details" class="form-control" placeholder="Enter section details">{{$detail->details}}</textarea>
                                         </div>
                                     </div>
                                     <div class="mb-3">

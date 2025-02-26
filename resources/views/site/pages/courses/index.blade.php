@@ -59,13 +59,13 @@
                                                         <td>{{ $course->video_url }}</td>
                                                         <td>{{ $course->description }}</td>
                                                         <td>
-                                                            @if($course->sections->isEmpty())
-                                                                <a href="{{ route('section.create',['course_id'=> $course->id]) }}"
-                                                                   class="btn text-success tooltipIcon">
-                                                                    <i class="fa fa-plus"></i>
-                                                                    <span class="tooltiptext">add sections</span>
-                                                                </a>
-                                                            @endif
+
+                                                        <a href="{{ route('section.create',['course_id'=> $course->id]) }}"
+                                                           class="btn text-success tooltipIcon">
+                                                            <i class="fa-solid fa-info"></i>
+                                                            <span class="tooltiptext">add sections</span>
+                                                        </a>
+
 {{--                                                            @if ($course->sections->isNotEmpty())--}}
 {{--                                                                <table class="table table-sm table-bordered">--}}
 {{--                                                                    <thead>--}}
