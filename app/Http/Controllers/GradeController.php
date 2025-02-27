@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\GradeRequest;
+use App\Models\Course;
 use App\Models\Grade;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -34,6 +35,7 @@ class GradeController extends Controller
     {
         $grade = new Grade();
         $grade->name = $request->input('name');
+        $grade->symbol = $request->input('symbol');
         $grade->save();
         return redirect()->route('grades.index')->with('success', 'Grade created successfully');
     }
@@ -41,9 +43,10 @@ class GradeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Grade $grade)
     {
-        //
+        $courses = Course::where('grade_id',$grade->id)->get();
+        return view('site.pages.grades.show', compact('grade','courses'));
     }
 
     /**
@@ -60,6 +63,7 @@ class GradeController extends Controller
     public function update(GradeRequest $request, Grade $grade)
     {
         $grade->name = $request->input('name');
+        $grade->symbol = $request->input('symbol');
         $grade->update();
         return redirect()->route('grades.index')->with('success', 'Grade updated successfully');
     }

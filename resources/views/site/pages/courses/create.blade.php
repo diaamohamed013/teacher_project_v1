@@ -99,12 +99,14 @@
                                                 <textarea placeholder="Description" name="description" class="form-control"></textarea>
                                             </div>
                                         </div>
-                                        <div class="col-md-12 text-center">
-                                            <button class="btn btn-warning rounded-pill sectionBtn saveBtn tooltipIcon" type="button">
-                                                <i class="fa fa-plus"></i>
-                                                <span class="tooltiptext">Add Section Data</span>
-                                            </button>
-                                        </div>
+
+{{--                                        <div class="col-md-12 text-center">--}}
+{{--                                            <button class="btn btn-warning rounded-pill sectionBtn saveBtn tooltipIcon" type="button">--}}
+{{--                                                <i class="fa fa-plus"></i>--}}
+{{--                                                <span class="tooltiptext">Add Section data</span>--}}
+{{--                                            </button>--}}
+{{--                                        </div>--}}
+
                                         <div class="col-md-12 px-0">
                                             <div id="sectionContainer">
                                             </div>
@@ -126,30 +128,27 @@
         <!-- /.content -->
     </div>
 @endsection
+
+
 @push('course-js')
     <script id="sectionTemplate" type="text/x-template">
-    <div class="section-item mt-3">
-        <div class="row mx-0">
+        <div class="section-item mt-3">
+            <div class="row mx-0">
             <hr>
-            <div class="col-md-6">
-                <div class="mb-3">
-                    <label for="">Section Name</label>
-                    <input type="text" name="name[]" class="form-control" required />
-                </div>
-            </div>
-            <div class="col-md-6">
+
+            <div class="col-md-4">
                 <div class="mb-3">
                     <label for="">Section Title</label>
                     <input type="text" name="section_title[]" class="form-control" required />
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="mb-3">
                     <label for="">Section URL</label>
                     <input type="url" name="url[]" class="form-control" />
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="mb-3">
                     <label for="">Section Type</label>
                     <select name="type[]" class="form-control" required>
@@ -174,8 +173,8 @@
                 </button>
             </div>
         </div>
-    </div>
-</script>
+        </div>
+    </script>
 
     <script>
         // Function to add a new section when the button is clicked

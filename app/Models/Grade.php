@@ -8,6 +8,7 @@ class Grade extends Model
 {
     protected $fillable = [
         'name',
+        'symbol',
     ];
 
     public function students(){

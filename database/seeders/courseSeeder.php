@@ -22,7 +22,7 @@ class courseSeeder extends Seeder
                 "description"        => "كتاب شرح وحل الهندسة الفراغية تالته ثانوي ازهر وعام 2025 ممنوع مشاركته مع احد نهائيا",
                 "price"              => 200,
                 "sale_price"         => 170,
-                "image"              => "null",
+                "image"              => null,
                 "video_url"          => "https://www.youtube.com/watch?v=VszI-LBQgW0",
                 "grade_id"           => 1,
             ]

@@ -6,7 +6,7 @@
             <div class="customeRow">
                 <div class="imageContent">
                     <div class="logo">
-                        <img src="{{ asset('imgs/logo.webp') }}" alt="">
+{{--                        <img src="{{ asset('imgs/logo.webp') }}" alt="">--}}
                     </div>
                     <p>سجل دخولك عند أ. احمد </p>
 
@@ -14,12 +14,9 @@
                     <div class="headerIcons
                         ">
                         <a class="facebook"
-                            href='https://www.facebook.com/profile.php?id=61556348423567&amp;mibextid=ZbWKwL'><i
+                            href='https://www.facebook.com/professorahmedfathy/'><i
                                 class="fa-brands fa-facebook-f"></i></a>
-                        <a class="youtube" href='https://www.youtube.com/@AhmedFawakhry'><i
-                                class="fa-brands fa-youtube"></i></a>
-
-                        <a class="whatsapp" href='https://wa.me/+201552700126'><i class="fa-brands fa-whatsapp"></i></a>
+                        <a class="whatsapp" href='https://wa.me/+201009597543'><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
                 <div class="content">

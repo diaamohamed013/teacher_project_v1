@@ -16,8 +16,8 @@ class CourseRequest extends FormRequest
         'description'     => 'nullable|string',
         'image'           => 'required|image|mimes:jpeg,png,jpg,gif',
         // 'sections'        => 'required|array', // Ensure 'sections' is an array
-        'name' => 'required|array', // Validate each section name
-        'name.*' => 'required|string', // Validate each section name
+//        'name' => 'required|array', // Validate each section name
+//        'name.*' => 'required|string', // Validate each section name
         // 'details' => 'required|array', // Ensure 'details' is an array
         // 'details.*' => 'required|string', // Ensure 'details' is an array
         // 'section_title' => 'required|array',

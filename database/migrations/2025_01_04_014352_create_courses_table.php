@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('description');
             $table->integer('price');
             $table->integer('sale_price');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('video_url');
             $table->foreignId('grade_id')->constrained()->onDelete('cascade');
             $table->timestamps();
