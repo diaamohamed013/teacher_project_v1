@@ -14,7 +14,6 @@ class SectionController extends Controller
         if ($request->has('course_id'))
         {
             $course = Course::where('id', $request->get('course_id'))->first();
-            //$title = $course->name
             return view('site.pages.sections.create',compact('course'));
         }
         return redirect()->back();
@@ -26,6 +25,18 @@ class SectionController extends Controller
         $section->name = $request->get('name');
         $section->course_id = $request->get('course_id');
         $section->save();
+        return redirect()->back();
+    }
+
+    public function update(Section $section,Request $request)
+    {
+        if($request->has('name'))
+        {
+
+            $section->name = $request->input('name');
+            $section->update();
+            return redirect()->back();
+        }
         return redirect()->back();
     }
 }

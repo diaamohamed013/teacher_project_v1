@@ -27,6 +27,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 Route::get('/section/create',[SectionController::class,'create'])->name('section.create');
 Route::post('/section',[SectionController::class,'store'])->name('section.store');
+Route::put('/section/{section}',[SectionController::class,'update'])->name('section.update');
 
 
 Route::post('/section_details',[SectionDetailController::class,'store'])->name('section_details.store');

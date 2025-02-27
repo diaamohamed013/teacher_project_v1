@@ -36,11 +36,15 @@
                                                 @foreach($course->sections as $index => $section)
                                                     <li class="list-group-item d-flex justify-content-between align-items-center">
                                                         <a data-toggle="collapse"
+                                                            id="sec_a_{{$section->id}}"
                                                            href="#multiCollapse_{{$section->id}}"
                                                            role="button"
                                                            aria-expanded="@if($index === 0) true @else false @endif"
                                                            aria-controls="multiCollapse_{{$section->id}}">
                                                             {{$section->name}}
+                                                        </a>
+                                                        <a class="change_name" sec_id="{{$section->id}}">
+                                                            <i class="fa fa-edit"></i>
                                                         </a>
                                                         <span class="badge badge-primary badge-pill">{{$section->sectionDetails?->count()}}</span>
                                                     </li>
@@ -101,3 +105,35 @@
         <!-- /.content -->
     </div>
 @endsection
+
+@push('course-js')
+    <script>
+        let edit_section = $('a.change_name');
+        let section_id = 0;
+        let text = "";
+
+        edit_section.on('click', function () {
+            section_id = $(this).attr('sec_id');
+            let section = $(`#sec_a_${section_id}`);
+            text = section.text();
+
+            let form = `<form action="/section/${section_id}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            @method('PUT')
+                            <div class="mb-3">
+                                <h3 class="mb-3" style="font-size: 1.5rem;font-family: hala;">تعديل اسم قسم</h3>
+                                <input type="text" name="name" value="${$.trim(text)}"  class="form-control" />
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary saveBtn">تعديل</button>
+                            </div>
+                        </form>`;
+
+            section.remove();
+            $(this).after(form);
+            $(this).remove();
+        });
+
+    </script>
+
+@endpush
