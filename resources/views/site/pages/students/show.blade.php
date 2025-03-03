@@ -25,23 +25,23 @@
                         <div class="card mt-3 cardRound">
                             <div class="card-body">
                                 <h4 class="d-flex justify-content-between align-items-center mb-3" style="font-size: 22px;">
-                                    Students
+                                    جميع الطلاب
                                 </h4>
                                 <div class="table-responsive">
                                     <table class="table table-bordered table-striped tableNoWrap">
                                         <thead>
                                             <tr>
-                                                <th>Student ID</th>
-                                                <th>Student Name</th>
-                                                <th>Student Email</th>
-                                                <th>Student Phone</th>
-                                                <th>Parent Phone</th>
-                                                <th>Student City</th>
+                                                <th>رقم الطالب</th>
+                                                <th>اسم الطالب</th>
+                                                <th>البريد الالكتروني</th>
+                                                <th>الهاتف</th>
+                                                <th>هاتف ولي الامر</th>
+                                                <th>المدينة</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             @foreach ($students as $student)
-                                                <tr>
+                                                <tr class="text-center">
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $student->user->name }}</td>
                                                     <td>{{ $student->user->email }}</td>
