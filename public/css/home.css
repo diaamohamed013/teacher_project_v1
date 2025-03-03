@@ -1386,6 +1386,11 @@ html[lang="ar"] .teacherSub {
     font-size: 16px;
 }
 
+.form-control {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
 .tableNoWrap thead th {
     white-space: nowrap;
     text-align: center;

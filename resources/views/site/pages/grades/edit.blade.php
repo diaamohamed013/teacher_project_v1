@@ -27,25 +27,23 @@
                             </ul>
                         @endif
 
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="d-flex justify-content-between align-items-center" style="font-size: 22px;">
-                                    Edit Grade
+                        <div class="card cardRound">
+                            <div class="card-body">
+                                <h4 class="d-flex justify-content-between align-items-center mb-3" style="font-size: 22px;">
+                                    تعديل الصف الدراسي
                                     <a href="{{ route('grades.index') }}" class="btn btn-danger" style="font-size: 16px;">
-                                        Back
+                                        العودة
                                     </a>
                                 </h4>
-                            </div>
-                            <div class="card-body">
                                 <form action="{{ route('grades.update', $grade->id) }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     @method('PUT')
                                     <div class="mb-3">
-                                        <label for="">Grade Name</label>
+                                        <label for="">اسم الصف الدراسي</label>
                                         <input type="text" name="name" class="form-control" value="{{ $grade->name }}" />
                                     </div>
                                     <div class="mb-3">
-                                        <button type="submit" class="btn btn-primary saveBtn">Update</button>
+                                        <button type="submit" class="btn btn-primary saveBtn">تعديل</button>
                                     </div>
                                 </form>
                             </div>

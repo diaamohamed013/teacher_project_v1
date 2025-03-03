@@ -27,24 +27,22 @@
                             </ul>
                         @endif
 
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="d-flex justify-content-between align-items-center" style="font-size: 22px;">
-                                    Create New Course
+                        <div class="card cardRound">
+                            <div class="card-body">
+                                <h4 class="d-flex justify-content-between align-items-center mb-3" style="font-size: 22px;">
+                                    إضافة كورس جديد
                                     <a href="{{ route('courses.index') }}" class="btn btn-danger" style="font-size: 16px;">
-                                        Back
+                                        العودة
                                     </a>
                                 </h4>
-                            </div>
-                            <div class="card-body">
                                 <form action="{{ route('courses.store') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row mx-0">
                                         <div class="col-md-6">
                                             <div class="mb-3">
-                                                <label for="grade_id">Grade</label>
+                                                <label for="grade_id">الصف</label>
                                                 <select name="grade_id" id="grade_id" class="form-control" required>
-                                                    <option value="" disabled selected>Select Grade</option>
+                                                    <option value="" disabled selected>قم باختيار الصف</option>
                                                     @foreach ($grades as $grade)
                                                         <option value="{{ $grade->id }}">{{ $grade->name }}</option>
                                                     @endforeach
@@ -53,59 +51,59 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="mb-3">
-                                                <label for="">Course Title</label>
+                                                <label for="">عنوان الكورس</label>
                                                 <input type="text" name="title" class="form-control" />
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="mb-3">
-                                                <label for="">Sub Title</label>
+                                                <label for="">العنوان الثانوي</label>
                                                 <input type="text" name="sub_title" class="form-control" />
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="mb-3">
-                                                <label for="">Price</label>
+                                                <label for="">السعر</label>
                                                 <input type="number" name="price" class="form-control" />
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="mb-3">
-                                                <label for="">Sale Price</label>
+                                                <label for="">السعر بعد الخصم</label>
                                                 <input type="number" name="sale_price" class="form-control" />
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="mb-3">
-                                                <label for="">Video URL</label>
+                                                <label for="">رابط الفيديو</label>
                                                 <input type="url" name="video_url" class="form-control" />
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="mb-3">
-                                                <label for="">Course Image</label>
+                                                <label for="">الصورة</label>
                                                 <div class="input-group">
                                                     <div class="custom-file">
                                                         <input type="file" class="custom-file-input" id="image"
                                                             name="image">
-                                                        <label class="custom-file-label" for="image">Choose file</label>
+                                                        <label class="custom-file-label" for="image">اختر ملف</label>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="mb-3">
-                                                <label for="">Description</label>
-                                                <textarea placeholder="Description" name="description" class="form-control"></textarea>
+                                                <label for="">التفاصيل</label>
+                                                <textarea placeholder="التفاصيل" name="description" class="form-control"></textarea>
                                             </div>
                                         </div>
 
-{{--                                        <div class="col-md-12 text-center">--}}
-{{--                                            <button class="btn btn-warning rounded-pill sectionBtn saveBtn tooltipIcon" type="button">--}}
-{{--                                                <i class="fa fa-plus"></i>--}}
-{{--                                                <span class="tooltiptext">Add Section data</span>--}}
-{{--                                            </button>--}}
-{{--                                        </div>--}}
+                                        {{--                                        <div class="col-md-12 text-center"> --}}
+                                        {{--                                            <button class="btn btn-warning rounded-pill sectionBtn saveBtn tooltipIcon" type="button"> --}}
+                                        {{--                                                <i class="fa fa-plus"></i> --}}
+                                        {{--                                                <span class="tooltiptext">Add Section data</span> --}}
+                                        {{--                                            </button> --}}
+                                        {{--                                        </div> --}}
 
                                         <div class="col-md-12 px-0">
                                             <div id="sectionContainer">
@@ -113,7 +111,7 @@
                                         </div>
                                         <div class="col-md-12">
                                             <div class="my-5">
-                                                <button type="submit" class="btn btn-primary saveBtn">Save</button>
+                                                <button type="submit" class="btn btn-primary saveBtn">حفظ</button>
                                             </div>
                                         </div>
                                     </div>
@@ -138,21 +136,21 @@
 
             <div class="col-md-4">
                 <div class="mb-3">
-                    <label for="">Section Title</label>
+                    <label for="">عنوان القسم</label>
                     <input type="text" name="section_title[]" class="form-control" required />
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="mb-3">
-                    <label for="">Section URL</label>
+                    <label for="">رابط القسم</label>
                     <input type="url" name="url[]" class="form-control" />
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="mb-3">
-                    <label for="">Section Type</label>
+                    <label for="">نوع القسم</label>
                     <select name="type[]" class="form-control" required>
-                        <option value="">Select Type</option>
+                        <option value="">قم باختيار النوع</option>
                         <option value="video">Video</option>
                         <option value="test">Test</option>
                         <option value="pdf">PDF</option>
@@ -161,15 +159,15 @@
             </div>
             <div class="col-md-12">
                 <div class="mb-3">
-                    <label for="">Details</label>
-                    <textarea name="details[]" class="form-control" placeholder="Enter section details"></textarea>
+                    <label for="">تفاصيل القسم</label>
+                    <textarea name="details[]" class="form-control" placeholder="قم بادخال التفاصيل"></textarea>
                 </div>
             </div>
             <div class="col-md-12 text-center">
                 <!-- Remove Section Button -->
                 <button type="button" class="btn btn-danger rounded-pill removeSectionBtn tooltipIcon shadow-none">
                     <i class="fa fa-trash"></i>
-                    <span class="tooltiptext">Remove Section</span>
+                    <span class="tooltiptext">حذف القسم</span>
                 </button>
             </div>
         </div>
