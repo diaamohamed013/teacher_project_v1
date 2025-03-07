@@ -10,17 +10,22 @@ use Illuminate\Http\Request;
 
 class PaymentController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $price = $request->input('price', 0);
+        $user_id = $request->input('user_id');
+        $student = Student::where('user_id', $user_id)->first();
+        $user = $student->user;
         try
         {
-            $payment = new fawaterk(349,1,1);
+            $payment = new fawaterk($price,$student->id,1);
             $payment->createCustomer(
-                'احمد',
-                'تواب',
-                'ahlsdkjflasj@gmail.com',
-                '01011401555',
-                'sdjfasdfsdaf');
+                $user->name ?? 'student',
+                $user->name ?? 'lastname',
+                $student->user->email,
+                $student->phone,
+                $student->city
+            );
             return $payment->createInvoice();
         }catch (\Exception $exception)
         {
@@ -42,15 +47,14 @@ class PaymentController extends Controller
                 return abort(404);
             }
 
-            $payment->paid = 1;
-            $payment->paid_at = date('Y-m-d H:i:s');
-            $payment->save();
+
+            fawaterk::Payment_processing($request->input('invoice_id'),$payment->teacher_id,$payment->student_id,$payment->id);
 
             $student = student::where('id',$payment->student_id)->first();
             $student->balance = $student->balance + $payment->total;
             $student->save();
 
-            return redirect()->route('profile');
+            return redirect()->route('home');
         }
         return abort(404);
     }
@@ -61,7 +65,7 @@ class PaymentController extends Controller
      */
     public function fail(Request $request): RedirectResponse
     {
-        return redirect()->route('profile')->withErrors('payment fail');
+        return redirect()->route('home')->withErrors('payment fail');
     }
 
     public function pending(Request $request)

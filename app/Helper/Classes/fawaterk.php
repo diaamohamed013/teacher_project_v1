@@ -83,15 +83,18 @@ class fawaterk
             ),
         ));
         $response = curl_exec($this->curl);
-        if (array_key_exists('data', $response))
-        {
-            $url = json_decode($response, true)['data']['url'];
-            $this->close();
-            $this->createPaymentRecord($response);
-            return redirect($url);
-        }
+
+        // select last of response
+        $position = strpos(mb_convert_encoding($response, 'UTF-8', 'ISO-8859-1'),mb_convert_encoding("}}", 'UTF-8', 'ISO-8859-1'));
+
+        $rest = substr($response, 0,$position + 2);
+        $response_json = json_decode($rest, true);
+        $url = $response_json['data']['url'];
+        $invoiceId = $response_json['data']['invoiceId'];
+        $this->Payment_processing($invoiceId,$this->teacher_id,$this->student_id);
         $this->close();
-        throw new \Exception($response);
+        return redirect($url);
+
     }
 
     protected function close()
@@ -99,34 +102,53 @@ class fawaterk
         return curl_close($this->curl);
     }
 
-    protected function createPaymentRecord($response)
+    public static function Payment_processing($invoiceId,$teacher_id,$student_id,$payment_id = null)
     {
-        DB::beginTransaction();
-        try
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => 'https://staging.fawaterk.com/api/v2/getInvoiceData/'.$invoiceId,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'GET',
+            CURLOPT_HTTPHEADER => array(
+                'Content-Type: application/json',
+                'Authorization: Bearer '.env('PAYMENT_API_TOKEN')
+            ),
+        ));
+
+        $response = curl_exec($curl);
+
+        curl_close($curl);
+
+        $data = json_decode($response, true);
+
+        $obj = (object) array(
+            'teacher_id'            => $teacher_id,
+            'student_id'            => $student_id,
+            'invoice_id'            => $data['data']['invoice_id'],
+            'invoice_key'           => $data['data']['invoice_key'],
+            'payment_method'        => $data['data']['payment_method'],
+            'currency'              => $data['data']['currency'],
+            'commission'            => $data['data']['commission'],
+            'total'                 => $data['data']['total_paid'],
+            'paid_at'               => $data['data']['paid_at'],
+            'paid'                  => $data['data']['paid'],
+        );
+
+        if ($payment_id)
         {
-            $data = json_decode($response, true)['data'];
-            $obj = (object) array(
-                'teacher_id'            => $this->teacher_id,
-                'student_id'            => $this->student_id,
-                'invoice_id'            => $data['invoiceId'],
-                'invoice_key'           => $data['invoiceKey'],
-                'payment_method'        => null,
-                'currency'              => 'EGP',
-                'commission'            => 0,
-                'total'                 => $this->price,
-                'paid'                  => 0,
-            );
-
-            $payment = payment::CreatePayment($obj);
-
-            DB::commit();
-        }
-        catch (\Exception $e)
+            payment::updatePayment($obj,$payment_id);
+        }else
         {
-            DB::rollBack();
-            dd($e->getMessage());
+            payment::CreatePayment($obj);
         }
-
     }
+
+
 
 }

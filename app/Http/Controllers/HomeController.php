@@ -21,16 +21,7 @@ class HomeController extends Controller
 
         if(auth()->user()?->is_teacher)
         {
-            $studentsCount = Student::count();
-            $coursesCount = Course::count();
-            $sectionsCount = Section::count();
-
-            return view('site.pages.dashboard.index', compact(
-                'studentsCount',
-                'coursesCount',
-                'sectionsCount',
-                'last_courses'
-            ));
+            return redirect()->route('dashboard.index');
         }
         return view('site.pages.home',compact('last_courses'));
     }

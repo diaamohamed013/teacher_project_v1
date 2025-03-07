@@ -23,3 +23,6 @@
 // payment table columns.
 // integration with payments.
 // TODO:: test all features eng:Diaa added it.
+//TODO:: complete course show
+//TODO:: complete dashobard data
+//TODO:: create student profile

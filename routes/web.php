@@ -9,6 +9,7 @@ use App\Http\Controllers\SectionController;
 use App\Http\Controllers\SectionDetailController;
 use App\Http\Controllers\StudentController;
 use App\Http\Middleware\teacher;
+use App\Models\Student;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -19,10 +20,6 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/course/{course}', [CourseController::class,'show'])->name('courses.show');
 Route::get('/grade/{grade}', [GradeController::class,'show'])->name('grades.show');
 
-Route::get('/payment', [PaymentController::class, 'index']);
-Route::get('/payment/success', [PaymentController::class, 'success']);
-Route::get('/payment/fail', [PaymentController::class, 'fail']);
-Route::get('/payment/pending', [PaymentController::class, 'pending']);
 
 
 Route::group(['middleware' => ['auth',teacher::class]], function ()
@@ -45,7 +42,13 @@ Route::group(['middleware' => ['auth',teacher::class]], function ()
     Route::get('/section_details/{detail}/edit',[SectionDetailController::class,'edit'])->name('section_details.edit');
     Route::put('/section_details/{detail}',[SectionDetailController::class,'update'])->name('section_details.update');
     Route::get('/section_details/create',[SectionDetailController::class,'create'])->name('section_details.create');
+});
 
 
-
+Route::group(['middleware' => ['auth']], function ()
+{
+    Route::get('/payment', [PaymentController::class, 'index'])->name('payment.index');
+    Route::get('/payment/success', [PaymentController::class, 'success']);
+    Route::get('/payment/fail', [PaymentController::class, 'fail']);
+    Route::get('/payment/pending', [PaymentController::class, 'pending']);
 });

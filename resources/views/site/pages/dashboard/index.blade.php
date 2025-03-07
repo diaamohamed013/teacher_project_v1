@@ -115,104 +115,50 @@
                                         <table class="table align-items-center mb-0">
                                             <thead class="thead-light">
                                                 <tr>
-                                                    <th scope="col">Payment Number</th>
-                                                    <th scope="col" class="text-end">Date & Time</th>
-                                                    <th scope="col" class="text-end">Amount</th>
-                                                    <th scope="col" class="text-end">Status</th>
+                                                    <th scope="col">فاتورة رقم</th>
+                                                    <th scope="col" class="text-end">تاريخ انشاء العملية</th>
+                                                    <th scope="col" class="text-end">المبلغ</th>
+                                                    <th scope="col" class="text-end">الحالة</th>
+                                                    <th scope="col" class="text-end">تاريخ الدفع</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <button class="btn btn-icon rounded-pill btn-success btn-sm ml-2">
-                                                            <i class="fa fa-check"></i>
-                                                        </button>
-                                                        Payment from #10231
-                                                    </th>
-                                                    <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                                                    <td class="text-end">$250.00</td>
-                                                    <td class="text-end">
-                                                        <span class="badge badge-success">Completed</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <button class="btn btn-icon rounded-pill btn-success btn-sm ml-2">
-                                                            <i class="fa fa-check"></i>
-                                                        </button>
-                                                        Payment from #10231
-                                                    </th>
-                                                    <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                                                    <td class="text-end">$250.00</td>
-                                                    <td class="text-end">
-                                                        <span class="badge badge-success">Completed</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <button class="btn btn-icon rounded-pill btn-success btn-sm ml-2">
-                                                            <i class="fa fa-check"></i>
-                                                        </button>
-                                                        Payment from #10231
-                                                    </th>
-                                                    <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                                                    <td class="text-end">$250.00</td>
-                                                    <td class="text-end">
-                                                        <span class="badge badge-success">Completed</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <button class="btn btn-icon rounded-pill btn-success btn-sm ml-2">
-                                                            <i class="fa fa-check"></i>
-                                                        </button>
-                                                        Payment from #10231
-                                                    </th>
-                                                    <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                                                    <td class="text-end">$250.00</td>
-                                                    <td class="text-end">
-                                                        <span class="badge badge-success">Completed</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <button class="btn btn-icon rounded-pill btn-success btn-sm ml-2">
-                                                            <i class="fa fa-check"></i>
-                                                        </button>
-                                                        Payment from #10231
-                                                    </th>
-                                                    <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                                                    <td class="text-end">$250.00</td>
-                                                    <td class="text-end">
-                                                        <span class="badge badge-success">Completed</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <button class="btn btn-icon rounded-pill btn-success btn-sm ml-2">
-                                                            <i class="fa fa-check"></i>
-                                                        </button>
-                                                        Payment from #10231
-                                                    </th>
-                                                    <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                                                    <td class="text-end">$250.00</td>
-                                                    <td class="text-end">
-                                                        <span class="badge badge-success">Completed</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <button class="btn btn-icon rounded-pill btn-success btn-sm ml-2">
-                                                            <i class="fa fa-check"></i>
-                                                        </button>
-                                                        Payment from #10231
-                                                    </th>
-                                                    <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                                                    <td class="text-end">$250.00</td>
-                                                    <td class="text-end">
-                                                        <span class="badge badge-success">Completed</span>
-                                                    </td>
-                                                </tr>
+                                                @foreach($payments as $payment)
+                                                    <tr>
+                                                        <th scope="row">
+                                                            @if($payment->paid)
+                                                                <button class="btn btn-icon rounded-pill btn-success btn-sm ml-2">
+                                                                    <i class="fa fa-check"></i>
+                                                                </button>
+                                                                #{{$payment->invoice_id}}
+                                                            @else
+                                                                <button class="btn btn-icon rounded-pill btn-danger btn-sm ml-2">
+                                                                    <i class="fa fa-info"></i>
+                                                                </button>
+                                                                #{{$payment->invoice_id}}
+                                                            @endif
+                                                        </th>
+                                                        <td class="text-end">
+                                                            {{Date_format_($payment->created_at)}}
+                                                        </td>
+                                                        <td class="text-end">
+                                                            {{$payment->total}}
+                                                           ج.م
+                                                        </td>
+                                                        <td class="text-end">
+                                                            @if($payment->paid)
+                                                                <span class="badge badge-success">مكتمل</span>
+                                                            @else
+                                                                <span class="badge badge-warning">غير مكتمل</span>
+                                                            @endif
+                                                        </td>
+                                                        <td class="text-end">
+                                                            @isset($payment->paid_at)
+                                                                {{Date_format_($payment->paid_at)}}
+                                                            @endif
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>
