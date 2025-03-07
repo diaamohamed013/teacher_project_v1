@@ -46,6 +46,10 @@ class PaymentController extends Controller
             {
                 return abort(404);
             }
+            if ($payment->paid == 1)
+            {
+                return abort(404);
+            }
 
 
             fawaterk::Payment_processing($request->input('invoice_id'),$payment->teacher_id,$payment->student_id,$payment->id);
@@ -54,7 +58,7 @@ class PaymentController extends Controller
             $student->balance = $student->balance + $payment->total;
             $student->save();
 
-            return redirect()->route('home');
+            return redirect()->route('home')->with('status', 'تمت عملية الدفع بنجاح.');
         }
         return abort(404);
     }
@@ -65,7 +69,7 @@ class PaymentController extends Controller
      */
     public function fail(Request $request): RedirectResponse
     {
-        return redirect()->route('home')->withErrors('payment fail');
+        return redirect()->route('home')->with('error', 'فشلت عملية الدفع الرجاء المحاولة مرة اخري.');
     }
 
     public function pending(Request $request)
