@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
-use App\Models\Grade;
-use App\Models\Section;
 use App\Models\Student;
-use Illuminate\Http\Request;
+use App\Models\Subscription;
 
 class HomeController extends Controller
 {
@@ -21,16 +19,7 @@ class HomeController extends Controller
 
         if(auth()->user()?->is_teacher)
         {
-            $studentsCount = Student::count();
-            $coursesCount = Course::count();
-            $sectionsCount = Section::count();
-
-            return view('site.pages.dashboard.index', compact(
-                'studentsCount',
-                'coursesCount',
-                'sectionsCount',
-                'last_courses'
-            ));
+            return redirect()->route('dashboard.index');
         }
         return view('site.pages.home',compact('last_courses'));
     }

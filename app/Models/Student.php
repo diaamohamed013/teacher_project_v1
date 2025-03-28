@@ -24,7 +24,8 @@ class Student extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function courses(){
-        return $this->belongsToMany(Course::class);
+    public function courses()
+    {
+        return $this->belongsToMany(Course::class,subscription::class)->withPivot('student_id');
     }
 }

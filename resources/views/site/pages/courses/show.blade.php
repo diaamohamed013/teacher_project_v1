@@ -63,8 +63,8 @@
                                                             {{$section->name}}
                                                         </div>
                                                         <div class='monthBtnDetails'>
-                                                            <span>1  شرح</span>
-                                                            <span>0  تطبيق</span>
+                                                            <span>{{$section->sectionDetails->count()}}  شرح</span>
+{{--                                                            <span>0  تطبيق</span>--}}
                                                             <span class='monthArrow'>
                                                                 <i class="fa-solid fa-angle-down"></i>
                                                             </span>
@@ -122,59 +122,52 @@
                             <div class="preview-card">
                                 <div class="preview-card-image ">
                                     <span class="degree gradeBg3">3ث</span>
-
-
                                     <img width="100" class="ontop" height="100" src="{{url($course->image)}}" alt=""/>
                                 </div>
                                 <div class="card-content">
                                     <div class="price">
-                                    <span class="real-price"><span class="number">40</span><span
+                                    <span class="real-price"><span class="number">{{$course->price}}</span><span
                                             class="unit">ج.م</span>
                                     </span>
                                         <span class="price-before-dis ontop">
-                                            <span class="number">80</span>
+                                            <span class="number">{{$course->sale_price}}</span>
                                             <span class="unit">ج.م</span>
                                         </span>
                                         <span class="discount">  خصم
-                                            50.00%</span>
-                                    </div>
-                                    <div class="expire-date">
-                                        <i class="fa-solid fa-stopwatch"></i>
-                                        <p>
-                                            متبقي
-                                            <span
-                                                class="date">11  من الشهور</span>
-                                            و
-                                            <span class="date">20
-                                                     من الأيام</span>
-
-                                            علي الانتهاء
-                                        </p>
+                                            {{number_format($course->sale_price/$course->price * 100,2)}}%</span>
                                     </div>
 
-                                    <a href="../login.html" class="buy-now mainHover"> <span class='ontop'> شراء الأن</span></a>
+                                    <a href="
+                                         @auth()
+                                            {{route('payment.index',['course_id'=> $course->id,'price' => $course->sale_price , 'user_id' => auth()->user()->id])}}
+                                         @else
+                                            {{route('login')}}
+                                         @endauth"
+                                       class="buy-now mainHover"> <span class='ontop'> شراء الأن</span></a>
                                     <div class="coupon">
-                                        <a href="../login.html" id="couponBtn" class="add-coupon">شحن رصيد</a>
+                                        <button  id="couponBtn" class='add-coupon' type='button' data-toggle="modal" data-target="#payment"
+                                                class='editBtn'>شحن رصيد
+                                        </button>
                                     </div>
                                     <div class="course-content">
                                         <h2>محتوي المحاضرة:</h2>
                                         <div class="item ">
-                                            <i class="fa-solid fa-calendar-days"></i>
+                                            <i class="fa-solid fa-calendar-days ml-2"></i>
                                             <p>المحاضرة ستكون متاحة طول العام</p>
                                         </div>
                                         <div class="item">
-                                            <i class="fa-solid fa-hourglass"></i>
+                                            <i class="fa-solid fa-hourglass  ml-2"></i>
                                             <p>
                                                 <span>0.00 دقيقة</span>
                                                 من الفيديو
                                             </p>
                                         </div>
                                         <div class="item">
-                                            <i class="fa-solid fa-clipboard-question"></i>
+                                            <i class="fa-solid fa-clipboard-question ml-2"></i>
                                             <p><span>0</span> من الاسئلة</p>
                                         </div>
                                         <div class="item">
-                                            <i class="fa-solid fa-location-dot"></i>
+                                            <i class="fa-solid fa-location-dot ml-2"></i>
                                             <p>الوصول من اي مكان</p>
                                         </div>
 
@@ -187,6 +180,8 @@
             </div>
         <!-- /.content -->
     </div>
+
+    <x-payModal></x-payModal>
 @endsection
 
 @push('course-js')

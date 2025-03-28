@@ -27,13 +27,22 @@
     <link rel="stylesheet" href="{{ asset('css/home-responsive.css') }}" class="rel">
     <link rel="stylesheet" href="{{ asset('css/nav.css') }}">
     @yield('css')
+    <style>
+        .notify
+        {
+            position: absolute;
+            top: 100px;
+            left: 46%;
+            z-index: 9999999;
+        }
+    </style>
 </head>
 
 <body>
     <div class="mainNav">
         @include('site.include.nav.guest')
     </div>
-
+    @include('site.notify')
 
     @yield('content')
 

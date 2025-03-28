@@ -1,19 +1,19 @@
 @extends('site.master')
 
-@section('title', 'Grades')
+@section('title', 'محاضرتي')
 
 @section('content')
-    <x-header title="{{ $grade->name }}"></x-header>
+    <x-header title="محاضرتي"></x-header>
     <div class="content-wrapper">
         <section class='levelsBox'>
             <div class="main">
                 <div class="row">
-                    @if(count($courses) === 0 )
+                    @if(count($student->courses) === 0 )
                         <div class="col-12 text-center mb-5 p-3" data-sal='slide-up' data-sal-delay='0' data-sal-easing='ease-out-back' data-sal-duration='1800'>
                             <h1>لا يوجد كورسات متاحه لهذا الصف</h1>
                         </div>
                     @endif
-                    @foreach($courses as $course)
+                    @foreach($student->courses as $course)
                         <div class="col-xl-4 col-lg-6 col-md-6 myCard" data-sal='slide-up' data-sal-delay='0' data-sal-easing='ease-out-back' data-sal-duration='1800'>
                             <a class="latestCard grade2" href='{{route('courses.show',$course->id)}}'>
                                 <div class="cardParent">
@@ -22,7 +22,7 @@
                                             <img width="100" height="100" class="ontop" src="{{ $course->image === null ? asset('imgs/teacher/bg_course.jpg') : asset($course->image)}}" alt="أ. أحمد فتحى">
 
                                             <span class="degree gradeBg2" dir="auto">
-                                           {{ $grade->symbol }}
+                                           {{ $course->grade->symbol }}
                                         </span>
                                             <div class="cardHover">
                                             <span class="playIcon">
