@@ -3,8 +3,6 @@
 namespace App\Models;
 
 use Carbon\Carbon;
-use DateTimeZone;
-use Faker\Provider\DateTime;
 use Illuminate\Database\Eloquent\Model;
 use Exception;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;

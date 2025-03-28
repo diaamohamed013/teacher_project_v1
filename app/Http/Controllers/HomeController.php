@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
-use App\Models\Grade;
-use App\Models\Section;
 use App\Models\Student;
-use Illuminate\Http\Request;
+use App\Models\Subscription;
 
 class HomeController extends Controller
 {

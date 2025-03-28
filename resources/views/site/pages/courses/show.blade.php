@@ -139,13 +139,15 @@
 
                                     <a href="
                                          @auth()
-                                            {{route('payment.index',['price' => $course->sale_price , 'user_id' => auth()->user()->id])}}
+                                            {{route('payment.index',['course_id'=> $course->id,'price' => $course->sale_price , 'user_id' => auth()->user()->id])}}
                                          @else
                                             {{route('login')}}
                                          @endauth"
                                        class="buy-now mainHover"> <span class='ontop'> شراء الأن</span></a>
                                     <div class="coupon">
-                                        <a href="{{route('login')}}" id="couponBtn" class="add-coupon">شحن رصيد</a>
+                                        <button  id="couponBtn" class='add-coupon' type='button' data-toggle="modal" data-target="#payment"
+                                                class='editBtn'>شحن رصيد
+                                        </button>
                                     </div>
                                     <div class="course-content">
                                         <h2>محتوي المحاضرة:</h2>
@@ -178,6 +180,8 @@
             </div>
         <!-- /.content -->
     </div>
+
+    <x-payModal></x-payModal>
 @endsection
 
 @push('course-js')

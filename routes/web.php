@@ -9,7 +9,6 @@ use App\Http\Controllers\SectionController;
 use App\Http\Controllers\SectionDetailController;
 use App\Http\Controllers\StudentController;
 use App\Http\Middleware\teacher;
-use App\Models\Student;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -51,4 +50,8 @@ Route::group(['middleware' => ['auth']], function ()
     Route::get('/payment/success', [PaymentController::class, 'success']);
     Route::get('/payment/fail', [PaymentController::class, 'fail']);
     Route::get('/payment/pending', [PaymentController::class, 'pending']);
+
+
+    Route::get('/myProfile', [StudentController::class, 'studentProfile'])->name('student.profile');
+    Route::get('/myCourses', [StudentController::class, 'my_courses'])->name('student.my_courses');
 });

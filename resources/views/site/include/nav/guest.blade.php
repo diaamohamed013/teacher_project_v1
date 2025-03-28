@@ -7,9 +7,6 @@
 
             <a href="{{ route('home') }}" class="navLogo" name="mainLogo">
                 <div class="logoBrand">
-
-{{--                    <img width='100' height='100' src="{{ asset('imgs/logo.webp') }}" alt="logo">--}}
-
                     <h2 class="brandTitle">
                         ماستر <span>الرياضيات</span>
                     </h2>
@@ -141,11 +138,11 @@
                                     </svg>
 
                                 </span>
-                                        <span class='studentName'>احمد الصغير عبد العال الصغير</span>
+                                        <span class='studentName'>{{auth()?->user()->name}}</span>
                                     </button>
                                     <ul class="dropdown-menu navDrop">
                                         <li>
-                                            <a class="dropdown-item navDropItem lineParent" href="https://alfawakhry-math.com/profile">
+                                            <a class="dropdown-item navDropItem lineParent" href="{{route('student.profile')}}">
                                                 <span class="line"></span>
                                                 <span class="line"></span>
                                                 <span class="line"></span>
@@ -159,7 +156,7 @@
                                         </li>
                                         <li>
                                             <a class="dropdown-item navDropItem lineParent"
-                                               href="https://alfawakhry-math.com/my-courses">
+                                               href="{{route('student.my_courses')}}">
                                                 <span class="line"></span>
                                                 <span class="line"></span>
                                                 <span class="line"></span>
@@ -193,16 +190,16 @@
                                                  alt="">
                                         </a>
                                     </div>
-                                    <h3 class='studentNameMob'>احمد الصغير عبد العال الصغير</h3>
-                                    <form class="search mobSearch" action="https://alfawakhry-math.com/search">
-                                        <input title="search" placeholder="ابحث هنا"
-                                               type="search" name="q" value="">
-                                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
-                                    </form>
+                                    <h3 class='studentNameMob'>{{auth()?->user()->name}}</h3>
+{{--                                    <form class="search mobSearch" action="https://alfawakhry-math.com/search">--}}
+{{--                                        <input title="search" placeholder="ابحث هنا"--}}
+{{--                                               type="search" name="q" value="">--}}
+{{--                                        <span><i class="fa-solid fa-magnifying-glass"></i></span>--}}
+{{--                                    </form>--}}
                                     <ul class=" navDrop">
                                         <li>
                                             <a class="dropdown-item navDropItem lineParent"
-                                               href="https://alfawakhry-math.com/profile">
+                                               href="{{route('student.profile')}}">
                                                 <span class="line"></span>
                                                 <span class="line"></span>
                                                 <span class="line"></span>
@@ -215,7 +212,7 @@
                                         </li>
                                         <li>
                                             <a class="dropdown-item navDropItem lineParent"
-                                               href="https://alfawakhry-math.com/my-courses">
+                                               href="{{route('student.my_courses')}}">
                                                 <span class="line"></span>
                                                 <span class="line"></span>
                                                 <span class="line"></span>
@@ -230,7 +227,8 @@
                                             <a href="javascript:{}" onclick="window.logoutFrm.submit()"
                                                class="dropdown-item navDropItem lineParent">
                                                 <form action="https://alfawakhry-math.com/logout" method="post">
-                                                    <input type="hidden" name="_token" value="GgvtMQT4GI37o2wa6og29zxUwfgenYUdoV7yagtT">                                                <span class="line"></span>
+                                                    @csrf
+                                                    <span class="line"></span>
                                                     <span class="line"></span>
                                                     <span class="line"></span>
                                                     <span class="line"></span>
