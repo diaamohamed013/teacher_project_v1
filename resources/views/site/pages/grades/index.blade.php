@@ -25,40 +25,41 @@
                         <div class="card mt-3 cardRound">
                             <div class="card-body">
                                 <h4 class="d-flex justify-content-between align-items-center mb-3" style="font-size: 22px;">
-                                    Grades
+                                    الصفوف الدراسية
                                     <a href="{{ route('grades.create') }}" class="btn btn-primary py-3"
                                         style="font-size: 16px;">
-                                        Add New Grade
+                                        إضافة صف دراسي
                                     </a>
                                 </h4>
                                 <div class="table-responsive">
                                     <table class="table table-bordered table-striped tableNoWrap">
                                         <thead>
                                             <tr>
-                                                <th>Id</th>
-                                                <th>Name</th>
-                                                <th width="40%">Action</th>
+                                                <th>رقم</th>
+                                                <th>اسم الصف الدراسي</th>
+                                                <th width="40%">الاجراءات</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             @foreach ($grades as $grade)
-                                                <tr>
+                                                <tr class="text-center">
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $grade->name }}</td>
                                                     <td>
                                                         <a href="{{ route('grades.edit', $grade->id) }}"
                                                             class="btn text-success tooltipIcon">
                                                             <i class="fa fa-edit"></i>
-                                                            <span class="tooltiptext">Edit</span>
+                                                            <span class="tooltiptext">تعديل</span>
                                                         </a>
-                                                        <form action="{{ route('grades.destroy', $grade->id) }}" method="POST"
-                                                            class="d-inline">
+                                                        <form action="{{ route('grades.destroy', $grade->id) }}"
+                                                            method="POST" class="d-inline">
                                                             @csrf
                                                             @method('DELETE')
-                                                            <button type="submit" class="btn text-danger tooltipIcon shadow-none"
+                                                            <button type="submit"
+                                                                class="btn text-danger tooltipIcon shadow-none"
                                                                 onclick="return confirm('Are you sure?')">
                                                                 <i class="fa fa-trash"></i>
-                                                                <span class="tooltiptext">Delete</span>
+                                                                <span class="tooltiptext">حذف</span>
                                                             </button>
                                                         </form>
                                                     </td>

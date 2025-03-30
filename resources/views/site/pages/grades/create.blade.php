@@ -27,29 +27,27 @@
                             </ul>
                         @endif
 
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="d-flex justify-content-between align-items-center" style="font-size: 22px;">
-                                    Create New Grade
+                        <div class="card cardRound">
+                            <div class="card-body">
+                                <h4 class="d-flex justify-content-between align-items-center mb-3" style="font-size: 22px;">
+                                    إضافة صف دراسي
                                     <a href="{{ route('grades.index') }}" class="btn btn-danger" style="font-size: 16px;">
-                                        Back
+                                        العودة
                                     </a>
                                 </h4>
-                            </div>
-                            <div class="card-body">
                                 <form action="{{ route('grades.store') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
 
                                     <div class="mb-3">
-                                        <label for="">Grade Name</label>
+                                        <label for="">اسم الصف الدراسي</label>
                                         <input type="text" name="name" class="form-control" />
                                     </div>
                                     <div class="mb-3">
-                                        <label for="">symbol </label>
+                                        <label for="">الرمز </label>
                                         <input type="text" name="symbol" class="form-control" />
                                     </div>
                                     <div class="mb-3">
-                                        <button type="submit" class="btn btn-primary saveBtn">Save</button>
+                                        <button type="submit" class="btn btn-primary saveBtn">حفظ</button>
                                     </div>
                                 </form>
                             </div>
