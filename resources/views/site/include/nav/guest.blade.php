@@ -338,6 +338,18 @@
 {{--                                    </form>--}}
                                     <ul class=" navDrop">
                                         <li>
+                                            <a class="dropdown-item navDropItem lineParent" href="{{route('dashboard.index')}}">
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class='navDropIcon'>
+                                                    <i class="fa-solid fa-chart-pie p-1"></i>
+                                                </span>
+                                                لوحة التحكم
+                                            </a>
+                                        </li>
+                                        <li>
                                             <a class="dropdown-item navDropItem lineParent"
                                                href="{{route('students.index')}}">
                                                 <span class="line"></span>
