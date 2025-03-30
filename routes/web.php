@@ -31,6 +31,7 @@ Route::group(['middleware' => ['auth',teacher::class]], function ()
 
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+    Route::post('/chart', [DashboardController::class, 'chart'])->name('dashboard.chart');
 
     Route::get('/section/create',[SectionController::class,'create'])->name('section.create');
     Route::post('/section',[SectionController::class,'store'])->name('section.store');
