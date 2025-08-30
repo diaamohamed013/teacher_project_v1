@@ -8,6 +8,8 @@ use App\Models\Student;
 use App\Models\Subscription;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use mysql_xdevapi\Exception;
 
 class PaymentController extends Controller
 {
@@ -45,28 +47,43 @@ class PaymentController extends Controller
      * @param Request $request
      * @return RedirectResponse
      */
-    public function success(Request $request): RedirectResponse
+    public function success(Request $request)
     {
-        if ($request->has('invoice_id') && is_numeric($request->input('invoice_id')))
+        if (!$request->has('invoice_id') || !is_numeric($request->input('invoice_id')))
+        {
+            return abort(404,'Not found');
+        }
+
+        DB::beginTransaction();
+        try
         {
             $payment = payment::where('invoice_id', $request->input('invoice_id'))->first();
-            if (empty($payment)) {
+            if (empty($payment))
+            {
                 return abort(404);
             }
-            if ($payment->paid == 1) {
+            if ($payment->paid == 1)
+            {
                 return abort(404);
             }
 
 
-            fawaterk::Payment_processing($request->input('invoice_id'), $payment->teacher_id, $payment->student_id, $payment->id);
+            $payment_update = fawaterk::Payment_processing($request->input('invoice_id'), $payment->teacher_id, $payment->student_id, $payment->id);
 
-            $student = student::where('id', $payment->student_id)->first();
-            $student->balance = $student->balance + $payment->total;
-            $student->update();
-
-            return redirect()->route('home')->with('status', 'تمت عملية الدفع بنجاح.');
+            $student = student::where('id', $payment_update->student_id)->first();
+            $student->balance = $student->balance + $payment_update->total;
+            if ($student->update())
+            {
+                DB::commit();
+                return redirect()->route('home')->with('status', 'تمت عملية الدفع بنجاح.');
+            }
+            DB::rollBack();
+            return redirect()->route('home')->with('error', 'فشلت عملية الدفع الرجاء المحاولة مرة اخري.');
+        }catch (\Exception $exception)
+        {
+            DB::rollBack();
+            return redirect()->route('home')->with('error', 'فشلت عملية الدفع الرجاء المحاولة مرة اخري.');
         }
-        return abort(404);
     }
 
     /**

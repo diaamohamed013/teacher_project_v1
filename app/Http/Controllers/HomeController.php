@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
-use App\Models\Student;
-use App\Models\Subscription;
 
 class HomeController extends Controller
 {

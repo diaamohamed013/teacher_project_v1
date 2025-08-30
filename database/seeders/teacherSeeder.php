@@ -18,6 +18,7 @@ class teacherSeeder extends Seeder
         $user = User::create([
             'name'      => 'ا\ احمد فتحي',
             'email'     => 'ahmedfathy@gmail.com',
+            'is_teacher'     => 1,
             'password'  => Hash::make('123456'),
         ]);
         DB::table('teachers')->insert([
