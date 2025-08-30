@@ -142,10 +142,10 @@ class fawaterk
 
         if ($payment_id)
         {
-            payment::updatePayment($obj,$payment_id);
+            return payment::updatePayment($obj,$payment_id);
         }else
         {
-            payment::CreatePayment($obj);
+            return  payment::CreatePayment($obj);
         }
     }
 
