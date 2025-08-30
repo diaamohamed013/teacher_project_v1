@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('faveicon/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('faveicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('faveicon/site.html') }}">
-    <title>أ/ أحمد الفواخري</title>
+    <title>أ/ أحمد فتحي</title>
     <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap-rtl.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/signup.css') }}" class="rel">
